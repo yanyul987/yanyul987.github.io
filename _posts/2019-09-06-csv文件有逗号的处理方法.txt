@@ -10,9 +10,10 @@ layout: post
 
 笔者在今天在处理一个csv文件时遇到了这样的内容：  
 
-'head0' , 'head1' , 'head2'
-'aaa' , 'bbb' , 'ccc'
-'aaa' , 'aaa,bbb', 'ccc'
+	'head0' , 'head1' , 'head2'
+	'aaa' , 'bbb' , 'ccc'
+	'aaa' , 'aaa,bbb', 'ccc'
+
 
 结果用`pandas`模块的`read_csv`函数读取csv文件时发现出错，出错信息是：
 `ParserError: Error tokenizing data. C error: Expected 3 fields in line 3, saw 4`
@@ -24,14 +25,14 @@ layout: post
 
 csv文件做一次整体替换，变成：
 
-"head0" , "head1" , "head2"
-"aaa" , "bbb" , "ccc"
-"aaa" , "aaa,bbb", "ccc"
+	"head0" , "head1" , "head2"
+	"aaa" , "bbb" , "ccc"
+	"aaa" , "aaa,bbb", "ccc"
 
 这样的就可以了吗？再试试读取一次还是会出现原来的问题，为什么呢？是因为在上面的csv文件中分隔符左右出现了空格。做一个实验
 
 csv1:
-"head0","head2", "head3"
+	"head0","head2", "head3"
 
 用pandas读取csv1会得到怎样的结果？结果是
 
