@@ -44,5 +44,5 @@ csv1:
 	
 为什么结果中head3中带了双引号而前面没带呢？这就是原因。
 
-我们需要在调用`read_csv`函数时加上参数`skipinitialspace=True`，这样就能完美解决这个问题啦。嗯。
+我们需要在调用`read_csv`函数时加上参数`skipinitialspace=True`，这样就能完美解决这个问题啦。
 
