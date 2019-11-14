@@ -12,6 +12,8 @@ layout: post
 
 2019.10.29 更新 Memory Networks
 
+2019.10.31 更新 End-To-End Memory Networks
+
 # Memory Networks
 
 ## 总结
@@ -30,6 +32,8 @@ layout: post
 # End-To-End Memory Networks
 
 ## 总结
+
+上一篇总结有提到，最初的memory network并不是`end-to-end`的，而是`pipeline`式的，原因就在于其模型在得到与`query`最相关的$k$个memories时，用的是$argmax$，所以整个模型的参数并不能一次性的反向传播及更新，而是分成一个一个module,先更新一个module的参数再更新下一个module的参数。而这篇文章就利用了`attention`，将`query`和memories做`attention`直接得到输出的特征向量。值得一提的是，这里的memory network可以是`multi-layers`式的，文章介绍了两种方式实现多层memory network，详情见文章。
 
 # Task-Oriented Conversation Generation Using Heterogeneous Memory Networks
 
