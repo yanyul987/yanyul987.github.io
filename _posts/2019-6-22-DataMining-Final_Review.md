@@ -29,7 +29,7 @@ FAMILY of classification methods!
  * Naive Bayes?  
  * SVM  
  * Neural Networks  
- ![class](https://github.com/yanyul987/yanyul987.github.io/tree/master/_posts/image/2019-6-22-DataMining/class_pic01.png)  
+ ![class](https://github.com/yanyul987/yanyul987.github.io/blob/master/_posts/image/2019-6-22-DataMining/class_pic01.png)  
  SVM使用了非线性分类器，而logistics和decision tree都是线性的？
 
 ## 损失函数
@@ -356,7 +356,7 @@ plot(msub)
 ```
 
 
-![png](https://github.com/yanyul987/yanyul987.github.io/tree/master/_posts/image/2019-6-22-DataMining/output_11_0.png)
+![png](https://github.com/yanyul987/yanyul987.github.io/blob/master/_posts/image/2019-6-22-DataMining/output_11_0.png)
 
 
 # Ridge & Lasso回归
@@ -620,7 +620,7 @@ plot(mstep)
 ```
 
 
-![png](https://github.com/yanyul987/yanyul987.github.io/tree/master/_posts/image/2019-6-22-DataMining/output_25_0.png)
+![png](https://github.com/yanyul987/yanyul987.github.io/blob/master/_posts/image/2019-6-22-DataMining/output_25_0.png)
 
 
 竖线对应Lasso中迭代的次数（对应上面查看mlasso时的step），对应的系数值不为0的变量即为被选入的。
@@ -829,7 +829,7 @@ cv1
 
 
 
-![png](https://github.com/yanyul987/yanyul987.github.io/tree/master/_posts/image/2019-6-22-DataMining/output_36_1.png)
+![png](https://github.com/yanyul987/yanyul987.github.io/blob/master/_posts/image/2019-6-22-DataMining/output_36_1.png)
 
 
 
@@ -925,7 +925,7 @@ mlasso$beta[10,]
 $d_{ij}(q)=(\sum_{k=1}^{p}|x_{ik}-x_{jk}|^q)^{1/q}$  
 
 <br />
-![距离图](https://github.com/yanyul987/yanyul987.github.io/tree/master/_posts/image/2019-6-22-DataMining/clustering_pic01.png)  
+![距离图](https://github.com/yanyul987/yanyul987.github.io/blob/master/_posts/image/2019-6-22-DataMining/clustering_pic01.png)  
 到中心点距离相同的点用同一种颜色表示  
 <br />  
 
@@ -1014,11 +1014,11 @@ image(t(dmat[order(km$cluster),]),yaxt="n")
 ```
 
 
-![png](https://github.com/yanyul987/yanyul987.github.io/tree/master/_posts/image/2019-6-22-DataMining/output_46_0.png)
+![png](https://github.com/yanyul987/yanyul987.github.io/blob/master/_posts/image/2019-6-22-DataMining/output_46_0.png)
 
 
 
-![png](https://github.com/yanyul987/yanyul987.github.io/tree/master/_posts/image/2019-6-22-DataMining/output_46_1.png)
+![png](https://github.com/yanyul987/yanyul987.github.io/blob/master/_posts/image/2019-6-22-DataMining/output_46_1.png)
 
 
 
@@ -1069,7 +1069,7 @@ ggplot(df)+
 
 
 
-![png](https://github.com/yanyul987/yanyul987.github.io/tree/master/_posts/image/2019-6-22-DataMining/output_49_1.png)
+![png](https://github.com/yanyul987/yanyul987.github.io/blob/master/_posts/image/2019-6-22-DataMining/output_49_1.png)
 
 
 
@@ -1083,11 +1083,11 @@ plot(pamk,col=pamk$cluster)
     "the condition has length > 1 and only the first element will be used"
 
 
-![png](https://github.com/yanyul987/yanyul987.github.io/tree/master/_posts/image/2019-6-22-DataMining/output_50_1.png)
+![png](https://github.com/yanyul987/yanyul987.github.io/blob/master/_posts/image/2019-6-22-DataMining/output_50_1.png)
 
 
 
-![png](https://github.com/yanyul987/yanyul987.github.io/tree/master/_posts/image/2019-6-22-DataMining/output_50_2.png)
+![png](https://github.com/yanyul987/yanyul987.github.io/blob/master/_posts/image/2019-6-22-DataMining/output_50_2.png)
 
 
 B: number of monte carlo bootstrap samples
@@ -1129,7 +1129,7 @@ EM allows us to figure out those parameters
 <br />
 >so basically, using EM, we will find out the pdf of all k clusters, therefore can calc the prob of all sample points belonging to each clusters, and assign the sample points to the most likely cluster  
 
-![em](https://github.com/yanyul987/yanyul987.github.io/tree/master/_posts/image/2019-6-22-DataMining/em_pic01.png)
+![em](https://github.com/yanyul987/yanyul987.github.io/blob/master/_posts/image/2019-6-22-DataMining/em_pic01.png)
 
 <font color='#F8D86A'>  
 **EM的步骤**  
@@ -1164,7 +1164,7 @@ heatmap(dmat)
 ```
 
 
-![png](https://github.com/yanyul987/yanyul987.github.io/tree/master/_posts/image/2019-6-22-DataMining/output_58_0.png)
+![png](https://github.com/yanyul987/yanyul987.github.io/blob/master/_posts/image/2019-6-22-DataMining/output_58_0.png)
 
 
 
@@ -1179,11 +1179,11 @@ image(t(dmat[order(clus),]),yaxt="n")
 ```
 
 
-![png](https://github.com/yanyul987/yanyul987.github.io/tree/master/_posts/image/2019-6-22-DataMining/output_59_0.png)
+![png](https://github.com/yanyul987/yanyul987.github.io/blob/master/_posts/image/2019-6-22-DataMining/output_59_0.png)
 
 
 
-![png](https://github.com/yanyul987/yanyul987.github.io/tree/master/_posts/image/2019-6-22-DataMining/output_59_1.png)
+![png](https://github.com/yanyul987/yanyul987.github.io/blob/master/_posts/image/2019-6-22-DataMining/output_59_1.png)
 
 
 
@@ -1212,7 +1212,7 @@ re=rect.hclust(iris.hcl,k=3,border=c("#C04851","#7A7374","#2E317C"))
 ```
 
 
-![png](https://github.com/yanyul987/yanyul987.github.io/tree/master/_posts/image/2019-6-22-DataMining/output_63_0.png)
+![png](https://github.com/yanyul987/yanyul987.github.io/blob/master/_posts/image/2019-6-22-DataMining/output_63_0.png)
 
 
 
@@ -1449,11 +1449,11 @@ plot(pam3,col=pam3$cluster)#Silhouette　Plot
     "the condition has length > 1 and only the first element will be used"
 
 
-![png](https://github.com/yanyul987/yanyul987.github.io/tree/master/_posts/image/2019-6-22-DataMining/output_72_1.png)
+![png](https://github.com/yanyul987/yanyul987.github.io/blob/master/_posts/image/2019-6-22-DataMining/output_72_1.png)
 
 
 
-![png](https://github.com/yanyul987/yanyul987.github.io/tree/master/_posts/image/2019-6-22-DataMining/output_72_2.png)
+![png](https://github.com/yanyul987/yanyul987.github.io/blob/master/_posts/image/2019-6-22-DataMining/output_72_2.png)
 
 
 
@@ -1473,11 +1473,11 @@ plot(pam4,col=pam4$cluster)　
     "the condition has length > 1 and only the first element will be used"
 
 
-![png](https://github.com/yanyul987/yanyul987.github.io/tree/master/_posts/image/2019-6-22-DataMining/output_73_2.png)
+![png](https://github.com/yanyul987/yanyul987.github.io/blob/master/_posts/image/2019-6-22-DataMining/output_73_2.png)
 
 
 
-![png](https://github.com/yanyul987/yanyul987.github.io/tree/master/_posts/image/2019-6-22-DataMining/output_73_3.png)
+![png](https://github.com/yanyul987/yanyul987.github.io/blob/master/_posts/image/2019-6-22-DataMining/output_73_3.png)
 
 
 <font color='#F8D86A'>分为3类时的sw_avg(0.55)比4类(0.49)大，说明聚成3类效果更好</font>
@@ -1485,7 +1485,7 @@ plot(pam4,col=pam4$cluster)　
 ### WSS(Within-cluster Sum of Squares)  
 $D_r=\sum_{i \in C_r}\sum_{j \in C_r}||x_i-x_j||^2=2n_r \sum_{i \in C_r}||x_i-\bar{x}||^2$  
 $W_k=\sum_{r=1}^{k}\frac{1}{2n_r}D_r$  
-![WSS](https://github.com/yanyul987/yanyul987.github.io/tree/master/_posts/image/2019-6-22-DataMining/clustering_pic02.png)  
+![WSS](https://github.com/yanyul987/yanyul987.github.io/blob/master/_posts/image/2019-6-22-DataMining/clustering_pic02.png)  
 >problem of using $W_k$ to determine $k$  
  - no reference clustering to compare?  
  - the differences $W_k-W_{k-1}$ are not normalized for comparison  
@@ -1508,7 +1508,7 @@ $W_k=\sum_{r=1}^{k}\frac{1}{2n_r}D_r$
    
 $Gap_n(k)=E_n^*(\log{W_k})-\log{W_k}$   
 <font color='#F8D86A'>the larger Gap the better (find the k that maximizes Gap(k)</font>  
-![gap](https://github.com/yanyul987/yanyul987.github.io/tree/master/_posts/image/2019-6-22-DataMining/clustering_pic03.png)  
+![gap](https://github.com/yanyul987/yanyul987.github.io/blob/master/_posts/image/2019-6-22-DataMining/clustering_pic03.png)  
 but according to '1-standard-error' theory, we don't expect to use the k with the largest gap statistics  
 but instead, we use the minimum k that satisfies:  
 $Gap(k)>Gap(k+1)-s_{k+1}$  
@@ -1542,7 +1542,7 @@ plot(gskmn)#画图Gap值
 
 
 
-![png](https://github.com/yanyul987/yanyul987.github.io/tree/master/_posts/image/2019-6-22-DataMining/output_78_1.png)
+![png](https://github.com/yanyul987/yanyul987.github.io/blob/master/_posts/image/2019-6-22-DataMining/output_78_1.png)
 
 
 
@@ -1568,7 +1568,7 @@ ggplot(dft)+
 
 
 
-![png](https://github.com/yanyul987/yanyul987.github.io/tree/master/_posts/image/2019-6-22-DataMining/output_79_2.png)
+![png](https://github.com/yanyul987/yanyul987.github.io/blob/master/_posts/image/2019-6-22-DataMining/output_79_2.png)
 
 
 ### 兰德指数(Rand Index, RI)
@@ -1652,12 +1652,12 @@ Cophenetic矩阵$H$的数值是根据原始数据点之间的距离矩阵得来�
 <br />  
 
 1. 得到原始数据点的距离矩阵  
- ![距离](https://github.com/yanyul987/yanyul987.github.io/tree/master/_posts/image/2019-6-22-DataMining/clustering_pic06.png)  
+ ![距离](https://github.com/yanyul987/yanyul987.github.io/blob/master/_posts/image/2019-6-22-DataMining/clustering_pic06.png)  
 2. 得到共表(Cophenetic)矩阵  
   > 共表矩阵的计算：使用在合并类的过程中使用的最小距离来填充距离矩阵的下三角。  
   例：开始有6个类：A，B，C，D，E，F$\rightarrow$将距离最小为0.5的D和F聚为一类(D,F)$\rightarrow$将距离最小为0.71的A和B聚为一类(A,B)$\rightarrow$将距离最小为1.00的(D,F)和E聚为一类(D,F,E)$\rightarrow$将距离最小为1.41的(D,F,E)和C聚为一类(D,F,E,C)$\rightarrow$将距离最小为2.50的(D,F,E,C)和(A,B)聚为一类(D,F,E,C,A,B)$\rightarrow$聚类结束  
   对应的共表矩阵是：  
-  ![共表](https://github.com/yanyul987/yanyul987.github.io/tree/master/_posts/image/2019-6-22-DataMining/clustering_pic05.png)
+  ![共表](https://github.com/yanyul987/yanyul987.github.io/blob/master/_posts/image/2019-6-22-DataMining/clustering_pic05.png)
 3. 两个矩阵（对应生成两个向量？）的相关系数即为共表型相关系数  
   
 <font color='#F8D86A'>共表型相关系数：越大越好</font>
@@ -1988,7 +1988,7 @@ itemFrequencyPlot(data3, support=0.05,col = "blue",
 ```
 
 
-![png](https://github.com/yanyul987/yanyul987.github.io/tree/master/_posts/image/2019-6-22-DataMining/output_104_0.png)
+![png](https://github.com/yanyul987/yanyul987.github.io/blob/master/_posts/image/2019-6-22-DataMining/output_104_0.png)
 
 
 
@@ -2000,7 +2000,7 @@ itemFrequencyPlot(data3, topN=10,col = "blue",
 ```
 
 
-![png](https://github.com/yanyul987/yanyul987.github.io/tree/master/_posts/image/2019-6-22-DataMining/output_105_0.png)
+![png](https://github.com/yanyul987/yanyul987.github.io/blob/master/_posts/image/2019-6-22-DataMining/output_105_0.png)
 
 
 * 进行规则挖掘
@@ -2272,7 +2272,7 @@ plot(rules,measure="confidence",method="graph",control=list(type="items"),shadin
 # 树
 
 ## Intuition  
-![tree](https://github.com/yanyul987/yanyul987.github.io/tree/master/_posts/image/2019-6-22-DataMining/tree_pic01.png)
+![tree](https://github.com/yanyul987/yanyul987.github.io/blob/master/_posts/image/2019-6-22-DataMining/tree_pic01.png)
 
 ## 单棵树
 
@@ -2497,7 +2497,7 @@ if (FALSE){
     
 
 
-![png](https://github.com/yanyul987/yanyul987.github.io/tree/master/_posts/image/2019-6-22-DataMining/output_126_1.png)
+![png](https://github.com/yanyul987/yanyul987.github.io/blob/master/_posts/image/2019-6-22-DataMining/output_126_1.png)
 
 
 ### 剪枝
@@ -2564,7 +2564,7 @@ if (TRUE) { #法2
 ```
 
 
-![png](https://github.com/yanyul987/yanyul987.github.io/tree/master/_posts/image/2019-6-22-DataMining/output_134_0.png)
+![png](https://github.com/yanyul987/yanyul987.github.io/blob/master/_posts/image/2019-6-22-DataMining/output_134_0.png)
 
 
 ### 检验
@@ -2704,7 +2704,7 @@ fig0
 
 
 
-![png](https://github.com/yanyul987/yanyul987.github.io/tree/master/_posts/image/2019-6-22-DataMining/output_148_2.png)
+![png](https://github.com/yanyul987/yanyul987.github.io/blob/master/_posts/image/2019-6-22-DataMining/output_148_2.png)
 
 
 
@@ -2731,7 +2731,7 @@ importanceplot(iada)
 ```
 
 
-![png](https://github.com/yanyul987/yanyul987.github.io/tree/master/_posts/image/2019-6-22-DataMining/output_150_0.png)
+![png](https://github.com/yanyul987/yanyul987.github.io/blob/master/_posts/image/2019-6-22-DataMining/output_150_0.png)
 
 
 ## Random Forest
@@ -2898,12 +2898,12 @@ table(ipred, iris$Species, dnn=c("Pred","True"))
 1. the SPLIT  
 二维平面上有两种不同的数据（圈和叉）。由于这些数据是线性可分的，所以可以用一条直线将这两类数据分开，这条直线就相当于一个超平面，超平面一边的数据点所对应的y全是-1 ，另一边所对应的y全是1。  
 这个超平面可以用分类函数表示$f(x)=w^T \ast x+b$表示  
-![svm示意](https://github.com/yanyul987/yanyul987.github.io/tree/master/_posts/image/2019-6-22-DataMining/svm_pic01.png)  
+![svm示意](https://github.com/yanyul987/yanyul987.github.io/blob/master/_posts/image/2019-6-22-DataMining/svm_pic01.png)  
 在进行分类的时候，遇到一个新的数据点x，将x代入f(x) 中，如果f(x)小于0则将x的类别赋为-1，如果f(x)大于0则将x的类别赋为1。  
 <br />
 2. the BEST SPLIT  
 对一个数据点进行分类，当超平面离数据点的“间隔”(margin)越大，分类的确信度（confidence）也越大。所以，为了使得分类的确信度尽量高，需要让所选择的超平面能够最大化这个“间隔”值。这个间隔就是下图中的Gap的一半。  
-![svm示意2](https://github.com/yanyul987/yanyul987.github.io/tree/master/_posts/image/2019-6-22-DataMining/svm_pic02.png)
+![svm示意2](https://github.com/yanyul987/yanyul987.github.io/blob/master/_posts/image/2019-6-22-DataMining/svm_pic02.png)
 
 SVM的作用是分类器，本质是有约束的最优化问题(constrained optimization problem）  
 1. 最优化 - 让路最宽  
@@ -2911,7 +2911,7 @@ $max \tilde{\gamma}$
 可以somehow转化成$max \frac{1}{||\omega||} $  
 2. 约束条件 - “点都不在路上”  
 $y_i(\omega^T x_i+b)>=1,  i=1,2,...,n$  
-![svm示意3](https://github.com/yanyul987/yanyul987.github.io/tree/master/_posts/image/2019-6-22-DataMining/svm_pic03.png)  
+![svm示意3](https://github.com/yanyul987/yanyul987.github.io/blob/master/_posts/image/2019-6-22-DataMining/svm_pic03.png)  
 上图中，中间的实线便是寻找到的最优超平面（Optimal Hyper Plane），其到两条虚线边界的距离相等，这个距离便是几何间隔$\tilde{\gamma}$，两条虚线间隔边界之间的距离等于$2 \tilde{\gamma}$，而**虚线间隔边界上的点则是支持向量**。由于这些支持向量刚好在虚线间隔边界上，所以它们满足$y(w^T x+b)=1$（为方便推导可以令$\hat{\gamma}=1$），而对于所有不是支持向量的点，则显然有$y(w^T x+b)>1$。
 
 ### 非线性情况   
@@ -2982,7 +2982,7 @@ ggplot(dft)+
 
 
 
-![png](https://github.com/yanyul987/yanyul987.github.io/tree/master/_posts/image/2019-6-22-DataMining/output_170_1.png)
+![png](https://github.com/yanyul987/yanyul987.github.io/blob/master/_posts/image/2019-6-22-DataMining/output_170_1.png)
 
 
 
@@ -3127,7 +3127,7 @@ plot(iris.svm, iris, Petal.Width~Petal.Length,
 ```
 
 
-![png](https://github.com/yanyul987/yanyul987.github.io/tree/master/_posts/image/2019-6-22-DataMining/output_173_0.png)
+![png](https://github.com/yanyul987/yanyul987.github.io/blob/master/_posts/image/2019-6-22-DataMining/output_173_0.png)
 
 
 
@@ -3279,7 +3279,7 @@ using a randomly labeled data on the otherhand does not
 ## BP神经网络
 
 <font size=3>* 特点：两层激活，从后向前（先C-B再B-A）  
-![BP](https://github.com/yanyul987/yanyul987.github.io/tree/master/_posts/image/2019-6-22-DataMining/nnet_pic05.png)    
+![BP](https://github.com/yanyul987/yanyul987.github.io/blob/master/_posts/image/2019-6-22-DataMining/nnet_pic05.png)    
   
 * A 输入层，下标i  
  *  a1 输入：$x_i$  
@@ -3660,7 +3660,7 @@ plot.nnet(iris.nn,cex=.7)
 ```
 
 
-![png](https://github.com/yanyul987/yanyul987.github.io/tree/master/_posts/image/2019-6-22-DataMining/output_193_0.png)
+![png](https://github.com/yanyul987/yanyul987.github.io/blob/master/_posts/image/2019-6-22-DataMining/output_193_0.png)
 
 
 设置更多参数  
