@@ -6,7 +6,7 @@
 # Site
 title: Yanyu Long
 subtitle:
-description: 
+description:School of Statistics and Mathematics, Central University of Finance and Economics
 author: Yanyu Long
 # Support language: de, en, fr-FR, id, ja, ko, pt-BR, pt, ru, zh-Hans, zh-hk, zh-tw
 language: zh-Hans
@@ -152,8 +152,8 @@ menu_icons:
 # ---------------------------------------------------------------
 
 # Schemes
-#scheme: Muse
-scheme: Mist
+scheme: Muse
+#scheme: Mist
 #scheme: Pisces
 
 
@@ -237,7 +237,7 @@ social_icons:
 
 # Sidebar Avatar
 in directory: 
-avatar: assets/portrait.jpg
+avatar: /assets/avatar.png
 
 
 # Table Of Contents in the Sidebar
