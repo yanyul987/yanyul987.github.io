@@ -12,7 +12,7 @@ layout: post
 
 # 神经网络  
 NNET is essentially about minimizing cost function  
-<font color='#9a4238'>复习要点：BP算法，**优化机制**，**PPT中的文字/思想部分** </font>
+<font color='#9a4238'>复习要点：BP算法，<b>优化机制，PPT中的文字/思想部分</b> </font>
 
 go to https://blog.csdn.net/illikang/article/details/82019945  
 https://www.youtube.com/watch?v=aircAruvnKk  
