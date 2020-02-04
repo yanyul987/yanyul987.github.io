@@ -714,7 +714,7 @@ Rand指数的实质：观察一对样本点$x_i$和$x_j$在两种聚类方法中
 
 例如样本为${a,b,c,d,e,f}$，G1:${(a,b,c),(d,e,f)}$，G2:${(a,b),(c,d,e),f}$  
 则由下表知，RI=9/15=0.6  
-![rand index](./clustering_pic04.jpg)
+![rand index](/assets/images/201906DataMining/clustering_pic04.jpg)
 
 匹配矩阵$N$  
 $RI$可以表示为一个很长的公式  

@@ -27,7 +27,7 @@ $E(X)=\frac{m_1}{n}\ast I(m_1,m_{11})+\frac{m_2}{n}\ast I(m_2,m_{21})+ ... + \fr
   
 <br />  
 * An Example  
-![infogain](./information_gain.jpg)  
+![infogain](/assets/images/201906DataMining/information_gain.jpg)  
 **拆分前**的熵值（不按年龄区分时，16个样本，4有12无）--$I(16,4)$  
 $I(16,4)=-(4/16 * log_2{4/16}+12/16 * log_2{12/16})=0.8113$  
 **拆分后**的熵值（按年龄区分，6/16在第一组，10/16在第二组，第一组1有5无，第二组3有10无）  
@@ -79,7 +79,7 @@ gain3=I(16,4)-6/16*I(6,1)-7/16*I(7,2)-3/16*I(3,1);gain3
 
 
 * the same example using Gini Index  
-![info_gain](./information_gain.jpg)  
+![info_gain](/assets/images/201906DataMining/information_gain.jpg)  
 
 $Gini(split_j)=weighted\, sum\,  of\,  Gini(node)=\frac{n_1}{n} Gini(n_1,n_{11})+ ... +\frac{n_k}{n} Gini(n_k,n_{k1})$  
 其中$Gini(n,a)=1-(\frac{a}{n})^2-(1-\frac{a}{n})^2$  
