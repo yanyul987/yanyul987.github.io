@@ -6,6 +6,7 @@ tags:
   - DataMining
   - NeuralNetwork
 layout: post
+excerpt_separator: <!--more-->
 
 ---
 
