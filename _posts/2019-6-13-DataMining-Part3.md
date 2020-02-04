@@ -6,6 +6,7 @@ tags:
   - DataMining
   - AssociationRules
 layout: post
+excerpt_separator: <!--more-->
 
 ---
 

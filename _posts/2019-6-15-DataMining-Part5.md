@@ -5,6 +5,7 @@ category: Data Mining
 tags: 
   - DataMining
 layout: post
+excerpt_separator: <!--more-->
 
 ---
 

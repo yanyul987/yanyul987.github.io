@@ -6,6 +6,7 @@ tags:
   - DataMining
   - Clustering
 layout: post
+excerpt_separator: <!--more-->
 
 ---
 

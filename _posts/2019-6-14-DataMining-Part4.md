@@ -6,6 +6,7 @@ tags:
   - DataMining
   - Tree
 layout: post
+excerpt_separator: <!--more-->
 
 ---
 
