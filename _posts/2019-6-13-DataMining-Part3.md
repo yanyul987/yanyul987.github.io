@@ -13,6 +13,8 @@ layout: post
 Association Rules  
 <font color='#9a4238'>掌握support confidence lift等指标</font>
 
+<!--more-->
+
 1. Support  
 $supp(x)=prob(x)$  
 2. Confidence  

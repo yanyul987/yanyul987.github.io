@@ -18,8 +18,10 @@ go to https://blog.csdn.net/illikang/article/details/82019945
 https://www.youtube.com/watch?v=aircAruvnKk  
 自己写神经网络代码，参考 https://blog.csdn.net/kMD8d5R/article/details/85086412 【不完整】
 
+<!--more-->
+
 the simplest nnet mode - https://www.youtube.com/watch?v=aircAruvnKk  
-example used throughout: hand-written digits recognition  
+example used through out: hand-written digits recognition  
 28*28 pixel grid  
    
 >some basic ideas to keep in mind:  

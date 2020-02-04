@@ -8,17 +8,12 @@ layout: post
 
 ---
 
-```R
-library(ggplot2)
-library(ggthemes)
-opt=function(wid,hei) {options(repr.plot.width=wid,repr.plot.height=hei)}
-# color - bright lemon - #9a4238
-```
-
 # General View 
 
 > * 不稳定的算法: 决策树，神经网络，MARS (multivariate splines)，和子集回归(subset regression)等等；  
 * 稳定的算法: 岭回归(ridge regression)，最近邻方法(K-nearest neighbor)，和线性判别方法(Linear discriminate)等等。
+
+<!--more-->
 
 ## Classification Methods
 FAMILY of classification methods!  
@@ -94,7 +89,12 @@ $L(y)=\max{(0,1-ty)}$
  * 增大样本容量（控制$R^2$等？）
 
 
-
+```R
+library(ggplot2)
+library(ggthemes)
+opt=function(wid,hei) {options(repr.plot.width=wid,repr.plot.height=hei)}
+# color - bright lemon - #9a4238
+```
 
 ```R
 data(mtcars)

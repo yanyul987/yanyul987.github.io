@@ -24,6 +24,8 @@ $I=-(p_1 \log_2{p_1}+ ... +p_k \log_2{p_k})=-\sum_{i=1}^k p_i \log_2{p_i}$
 $Gain(X)=I(n,n_1)-E(X)$  
 其中$I(n,n_1)=-(p \log_2{p}+(1-p) \log_2{(1-p)})$，$p=\frac{n_1}{n}$  
 $E(X)=\frac{m_1}{n}\ast I(m_1,m_{11})+\frac{m_2}{n}\ast I(m_2,m_{21})+ ... + \frac{m_k}{n}\ast I(m_k,m_{k1})$  
+
+<!--more-->
   
 <br />  
 * An Example  

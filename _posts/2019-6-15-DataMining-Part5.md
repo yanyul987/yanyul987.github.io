@@ -17,6 +17,7 @@ read the following if interested
 https://www.zhihu.com/question/24627  
 https://www.csie.ntu.edu.tw/~cjlin/libsvm/
 
+<!--more-->
 ## LDA (Linear Discriminant)
 
 
