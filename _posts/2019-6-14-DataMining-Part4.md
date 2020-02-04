@@ -126,14 +126,14 @@ head(train)
 
 
 <table>
-<thead><tr><th></th><th scope=col>Sepal.Length</th><th scope=col>Sepal.Width</th><th scope=col>Petal.Length</th><th scope=col>Petal.Width</th><th scope=col>Species</th></tr></thead>
+<thead><tr><th></th><th scope="col">Sepal.Length</th><th scope="col">Sepal.Width</th><th scope="col">Petal.Length</th><th scope="col">Petal.Width</th><th scope="col">Species</th></tr></thead>
 <tbody>
-	<tr><th scope=row>9</th><td>4.4       </td><td>2.9       </td><td>1.4       </td><td>0.2       </td><td>setosa    </td></tr>
-	<tr><th scope=row>43</th><td>4.4       </td><td>3.2       </td><td>1.3       </td><td>0.2       </td><td>setosa    </td></tr>
-	<tr><th scope=row>77</th><td>6.8       </td><td>2.8       </td><td>4.8       </td><td>1.4       </td><td>versicolor</td></tr>
-	<tr><th scope=row>44</th><td>5.0       </td><td>3.5       </td><td>1.6       </td><td>0.6       </td><td>setosa    </td></tr>
-	<tr><th scope=row>105</th><td>6.5       </td><td>3.0       </td><td>5.8       </td><td>2.2       </td><td>virginica </td></tr>
-	<tr><th scope=row>87</th><td>6.7       </td><td>3.1       </td><td>4.7       </td><td>1.5       </td><td>versicolor</td></tr>
+	<tr><th scope="row">9</th><td>4.4       </td><td>2.9       </td><td>1.4       </td><td>0.2       </td><td>setosa    </td></tr>
+	<tr><th scope="row">43</th><td>4.4       </td><td>3.2       </td><td>1.3       </td><td>0.2       </td><td>setosa    </td></tr>
+	<tr><th scope="row">77</th><td>6.8       </td><td>2.8       </td><td>4.8       </td><td>1.4       </td><td>versicolor</td></tr>
+	<tr><th scope="row">44</th><td>5.0       </td><td>3.5       </td><td>1.6       </td><td>0.6       </td><td>setosa    </td></tr>
+	<tr><th scope="row">105</th><td>6.5       </td><td>3.0       </td><td>5.8       </td><td>2.2       </td><td>virginica </td></tr>
+	<tr><th scope="row">87</th><td>6.7       </td><td>3.1       </td><td>4.7       </td><td>1.5       </td><td>versicolor</td></tr>
 </tbody>
 </table>
 
@@ -358,7 +358,7 @@ XGBoost - https://blog.csdn.net/langyichao1/article/details/70183127
 
 ## AdaBoost
 
-自从AdaBoost 方法提出之后，大量模拟和应用结果显示该方法可以大大降低基分类器(比如决策树)的预测误差，Breiman(1996)曾指出AdaBoost 方法是现有的分类方法中最好的一种。Breiman(1996)认为<font color='#9a4238'>最主要的原因是AdaBoost方法的**自适应的重新抽样的方法**，而不是其具体定义的更新p(n)的公式。</font>  
+自从AdaBoost 方法提出之后，大量模拟和应用结果显示该方法可以大大降低基分类器(比如决策树)的预测误差，Breiman(1996)曾指出AdaBoost 方法是现有的分类方法中最好的一种。Breiman(1996)认为最主要的原因是AdaBoost方法的**自适应的重新抽样的方法**，而不是其具体定义的更新p(n)的公式。
 
 <font color='#9a4238'>二分类Adaboost算法是最小化指数损失$L(y,f(x))=\exp{(-yf(x))}$的分步向前可加模型。</font>
 
@@ -414,7 +414,7 @@ fig0
 
 
 <table>
-<thead><tr><th scope=col>i</th><th scope=col>error</th></tr></thead>
+<thead><tr><th scope="col">i</th><th scope="col">error</th></tr></thead>
 <tbody>
 	<tr><td> 1        </td><td>0.06666667</td></tr>
 	<tr><td> 2        </td><td>0.02222222</td></tr>
@@ -531,12 +531,12 @@ round(importance(iris.rf), 2)
 
 
 <table>
-<thead><tr><th></th><th scope=col>setosa</th><th scope=col>versicolor</th><th scope=col>virginica</th><th scope=col>MeanDecreaseAccuracy</th><th scope=col>MeanDecreaseGini</th></tr></thead>
+<thead><tr><th></th><th scope="col">setosa</th><th scope="col">versicolor</th><th scope="col">virginica</th><th scope="col">MeanDecreaseAccuracy</th><th scope="col">MeanDecreaseGini</th></tr></thead>
 <tbody>
-	<tr><th scope=row>Sepal.Length</th><td> 6.74</td><td> 8.64</td><td> 6.16</td><td>10.42</td><td> 6.41</td></tr>
-	<tr><th scope=row>Sepal.Width</th><td> 3.98</td><td> 1.87</td><td> 0.93</td><td> 3.15</td><td> 1.51</td></tr>
-	<tr><th scope=row>Petal.Length</th><td>22.24</td><td>31.32</td><td>26.03</td><td>33.15</td><td>31.05</td></tr>
-	<tr><th scope=row>Petal.Width</th><td>22.14</td><td>32.65</td><td>30.06</td><td>34.41</td><td>30.34</td></tr>
+	<tr><th scope="row">Sepal.Length</th><td> 6.74</td><td> 8.64</td><td> 6.16</td><td>10.42</td><td> 6.41</td></tr>
+	<tr><th scope="row">Sepal.Width</th><td> 3.98</td><td> 1.87</td><td> 0.93</td><td> 3.15</td><td> 1.51</td></tr>
+	<tr><th scope="row">Petal.Length</th><td>22.24</td><td>31.32</td><td>26.03</td><td>33.15</td><td>31.05</td></tr>
+	<tr><th scope="row">Petal.Width</th><td>22.14</td><td>32.65</td><td>30.06</td><td>34.41</td><td>30.34</td></tr>
 </tbody>
 </table>
 

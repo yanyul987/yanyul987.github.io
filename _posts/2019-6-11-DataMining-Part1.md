@@ -66,7 +66,7 @@ $L(y)=\max{(0,1-ty)}$
 
 
 # 多元回归的变量选择  
-<font color=#F8D864>**简单考，选择判断**</font>  
+<font color='#F8D864'>**简单考，选择判断**</font>  
 1. 多重共线性的定义  
  * 共线性：某一对自变量的相关系数很高(say 0.98)
  * 多重共线性：虽然没有任何一对极高的相关系数，但多对自变量之间的相关系数都充分高（say 0.85），也即，虽然ind3~ind1的拟合效果不佳（ind1无法充分解释ind3的方差），ind3~ind1+ind2的拟合效果却很好（ind3造成的方差可以充分被ind1和ind2解释/accounted for）
@@ -473,7 +473,7 @@ colnames(diabetes$x2)
 
 
 
-<ol class=list-inline>
+<ol class="list-inline">
 	<li>442</li>
 	<li>10</li>
 </ol>
@@ -481,7 +481,7 @@ colnames(diabetes$x2)
 
 
 
-<ol class=list-inline>
+<ol class="list-inline">
 	<li>442</li>
 	<li>64</li>
 </ol>
@@ -489,7 +489,7 @@ colnames(diabetes$x2)
 
 
 
-<ol class=list-inline>
+<ol class="list-inline">
 	<li>'age'</li>
 	<li>'sex'</li>
 	<li>'bmi'</li>
@@ -505,7 +505,7 @@ colnames(diabetes$x2)
 
 
 
-<ol class=list-inline>
+<ol class="list-inline">
 	<li>'age'</li>
 	<li>'sex'</li>
 	<li>'bmi'</li>
@@ -633,21 +633,21 @@ summary(mlasso)
 
 
 <table>
-<thead><tr><th></th><th scope=col>Df</th><th scope=col>Rss</th><th scope=col>Cp</th></tr></thead>
+<thead><tr><th></th><th scope="col">Df</th><th scope="col">Rss</th><th scope="col">Cp</th></tr></thead>
 <tbody>
-	<tr><th scope=row>0</th><td> 1        </td><td>2621009   </td><td>453.726255</td></tr>
-	<tr><th scope=row>1</th><td> 2        </td><td>2510465   </td><td>418.032217</td></tr>
-	<tr><th scope=row>2</th><td> 3        </td><td>1700369   </td><td>143.801193</td></tr>
-	<tr><th scope=row>3</th><td> 4        </td><td>1527165   </td><td> 86.741078</td></tr>
-	<tr><th scope=row>4</th><td> 5        </td><td>1365734   </td><td> 33.695679</td></tr>
-	<tr><th scope=row>5</th><td> 6        </td><td>1324118   </td><td> 21.505224</td></tr>
-	<tr><th scope=row>6</th><td> 7        </td><td>1308932   </td><td> 18.327003</td></tr>
-	<tr><th scope=row>7</th><td> 8        </td><td>1275355   </td><td>  8.877493</td></tr>
-	<tr><th scope=row>8</th><td> 9        </td><td>1270233   </td><td>  9.131148</td></tr>
-	<tr><th scope=row>9</th><td>10        </td><td>1269390   </td><td> 10.843547</td></tr>
-	<tr><th scope=row>10</th><td>11        </td><td>1264977   </td><td> 11.338975</td></tr>
-	<tr><th scope=row>11</th><td>10        </td><td>1264765   </td><td>  9.266761</td></tr>
-	<tr><th scope=row>12</th><td>11        </td><td>1263983   </td><td> 11.000000</td></tr>
+	<tr><th scope="row">0</th><td> 1        </td><td>2621009   </td><td>453.726255</td></tr>
+	<tr><th scope="row">1</th><td> 2        </td><td>2510465   </td><td>418.032217</td></tr>
+	<tr><th scope="row">2</th><td> 3        </td><td>1700369   </td><td>143.801193</td></tr>
+	<tr><th scope="row">3</th><td> 4        </td><td>1527165   </td><td> 86.741078</td></tr>
+	<tr><th scope="row">4</th><td> 5        </td><td>1365734   </td><td> 33.695679</td></tr>
+	<tr><th scope="row">5</th><td> 6        </td><td>1324118   </td><td> 21.505224</td></tr>
+	<tr><th scope="row">6</th><td> 7        </td><td>1308932   </td><td> 18.327003</td></tr>
+	<tr><th scope="row">7</th><td> 8        </td><td>1275355   </td><td>  8.877493</td></tr>
+	<tr><th scope="row">8</th><td> 9        </td><td>1270233   </td><td>  9.131148</td></tr>
+	<tr><th scope="row">9</th><td>10        </td><td>1269390   </td><td> 10.843547</td></tr>
+	<tr><th scope="row">10</th><td>11        </td><td>1264977   </td><td> 11.338975</td></tr>
+	<tr><th scope="row">11</th><td>10        </td><td>1264765   </td><td>  9.266761</td></tr>
+	<tr><th scope="row">12</th><td>11        </td><td>1263983   </td><td> 11.000000</td></tr>
 </tbody>
 </table>
 
@@ -771,7 +771,7 @@ cv1
 
 <dl>
 	<dt>$index</dt>
-		<dd><ol class=list-inline>
+		<dd><ol class="list-inline">
 	<li>1</li>
 	<li>2</li>
 	<li>3</li>
@@ -788,7 +788,7 @@ cv1
 </ol>
 </dd>
 	<dt>$cv</dt>
-		<dd><ol class=list-inline>
+		<dd><ol class="list-inline">
 	<li>5954.14703966155</li>
 	<li>5719.75327158815</li>
 	<li>3936.26036159499</li>
@@ -805,7 +805,7 @@ cv1
 </ol>
 </dd>
 	<dt>$cv.error</dt>
-		<dd><ol class=list-inline>
+		<dd><ol class="list-inline">
 	<li>382.751667681927</li>
 	<li>378.33153118742</li>
 	<li>251.721868718799</li>
@@ -852,7 +852,7 @@ mlasso$beta[10,]
 ```
 
 
-<dl class=dl-horizontal>
+<dl class="dl-horizontal">
 	<dt>age</dt>
 		<dd>0</dd>
 	<dt>sex</dt>

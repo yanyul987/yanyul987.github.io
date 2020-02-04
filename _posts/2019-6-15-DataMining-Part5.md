@@ -15,7 +15,7 @@ also to solve the classification problem
 read the following if interested  
 >https://blog.csdn.net/v_july_v/article/details/7624837#t34  
 https://www.zhihu.com/question/24627  
-https://www.csie.ntu.edu.tw/~cjlin/libsvm/![image.png](attachment:image.png)
+https://www.csie.ntu.edu.tw/~cjlin/libsvm/
 
 ## LDA (Linear Discriminant)
 
@@ -225,47 +225,47 @@ iris.svm$rho               #查看分类时的截距b
 
 
 <table>
-<thead><tr><th></th><th scope=col>Sepal.Length</th><th scope=col>Sepal.Width</th><th scope=col>Petal.Length</th><th scope=col>Petal.Width</th></tr></thead>
+<thead><tr><th></th><th scope="col">Sepal.Length</th><th scope="col">Sepal.Width</th><th scope="col">Petal.Length</th><th scope="col">Petal.Width</th></tr></thead>
 <tbody>
-	<tr><th scope=row>16</th><td>-0.17309407</td><td> 3.08045544</td><td>-1.2791040 </td><td>-1.0486668 </td></tr>
-	<tr><th scope=row>24</th><td>-0.89767388</td><td> 0.55674567</td><td>-1.1658087 </td><td>-0.9174741 </td></tr>
-	<tr><th scope=row>42</th><td>-1.62225369</td><td>-1.73753594</td><td>-1.3923993 </td><td>-1.1798595 </td></tr>
-	<tr><th scope=row>51</th><td> 1.39682886</td><td> 0.32731751</td><td> 0.5336209 </td><td> 0.2632600 </td></tr>
-	<tr><th scope=row>53</th><td> 1.27606556</td><td> 0.09788935</td><td> 0.6469162 </td><td> 0.3944526 </td></tr>
-	<tr><th scope=row>54</th><td>-0.41462067</td><td>-1.73753594</td><td> 0.1370873 </td><td> 0.1320673 </td></tr>
-	<tr><th scope=row>55</th><td> 0.79301235</td><td>-0.59039513</td><td> 0.4769732 </td><td> 0.3944526 </td></tr>
-	<tr><th scope=row>58</th><td>-1.13920048</td><td>-1.50810778</td><td>-0.2594462 </td><td>-0.2615107 </td></tr>
-	<tr><th scope=row>67</th><td>-0.29385737</td><td>-0.13153881</td><td> 0.4203256 </td><td> 0.3944526 </td></tr>
-	<tr><th scope=row>69</th><td> 0.43072244</td><td>-1.96696410</td><td> 0.4203256 </td><td> 0.3944526 </td></tr>
-	<tr><th scope=row>71</th><td> 0.06843254</td><td> 0.32731751</td><td> 0.5902685 </td><td> 0.7880307 </td></tr>
-	<tr><th scope=row>73</th><td> 0.55148575</td><td>-1.27867961</td><td> 0.6469162 </td><td> 0.3944526 </td></tr>
-	<tr><th scope=row>77</th><td> 1.15530226</td><td>-0.59039513</td><td> 0.5902685 </td><td> 0.2632600 </td></tr>
-	<tr><th scope=row>78</th><td> 1.03453895</td><td>-0.13153881</td><td> 0.7035638 </td><td> 0.6568380 </td></tr>
-	<tr><th scope=row>79</th><td> 0.18919584</td><td>-0.36096697</td><td> 0.4203256 </td><td> 0.3944526 </td></tr>
-	<tr><th scope=row>84</th><td> 0.18919584</td><td>-0.81982329</td><td> 0.7602115 </td><td> 0.5256453 </td></tr>
-	<tr><th scope=row>85</th><td>-0.53538397</td><td>-0.13153881</td><td> 0.4203256 </td><td> 0.3944526 </td></tr>
-	<tr><th scope=row>86</th><td> 0.18919584</td><td> 0.78617383</td><td> 0.4203256 </td><td> 0.5256453 </td></tr>
-	<tr><th scope=row>99</th><td>-0.89767388</td><td>-1.27867961</td><td>-0.4293892 </td><td>-0.1303181 </td></tr>
-	<tr><th scope=row>107</th><td>-1.13920048</td><td>-1.27867961</td><td> 0.4203256 </td><td> 0.6568380 </td></tr>
-	<tr><th scope=row>111</th><td> 0.79301235</td><td> 0.32731751</td><td> 0.7602115 </td><td> 1.0504160 </td></tr>
-	<tr><th scope=row>119</th><td> 2.24217198</td><td>-1.04925145</td><td> 1.7798692 </td><td> 1.4439941 </td></tr>
-	<tr><th scope=row>120</th><td> 0.18919584</td><td>-1.96696410</td><td> 0.7035638 </td><td> 0.3944526 </td></tr>
-	<tr><th scope=row>124</th><td> 0.55148575</td><td>-0.81982329</td><td> 0.6469162 </td><td> 0.7880307 </td></tr>
-	<tr><th scope=row>127</th><td> 0.43072244</td><td>-0.59039513</td><td> 0.5902685 </td><td> 0.7880307 </td></tr>
-	<tr><th scope=row>128</th><td> 0.30995914</td><td>-0.13153881</td><td> 0.6469162 </td><td> 0.7880307 </td></tr>
-	<tr><th scope=row>130</th><td> 1.63835547</td><td>-0.13153881</td><td> 1.1567451 </td><td> 0.5256453 </td></tr>
-	<tr><th scope=row>132</th><td> 2.48369858</td><td> 1.70388647</td><td> 1.4966310 </td><td> 1.0504160 </td></tr>
-	<tr><th scope=row>134</th><td> 0.55148575</td><td>-0.59039513</td><td> 0.7602115 </td><td> 0.3944526 </td></tr>
-	<tr><th scope=row>135</th><td> 0.30995914</td><td>-1.04925145</td><td> 1.0434497 </td><td> 0.2632600 </td></tr>
-	<tr><th scope=row>139</th><td> 0.18919584</td><td>-0.13153881</td><td> 0.5902685 </td><td> 0.7880307 </td></tr>
-	<tr><th scope=row>150</th><td> 0.06843254</td><td>-0.13153881</td><td> 0.7602115 </td><td> 0.7880307 </td></tr>
+	<tr><th scope="row">16</th><td>-0.17309407</td><td> 3.08045544</td><td>-1.2791040 </td><td>-1.0486668 </td></tr>
+	<tr><th scope="row">24</th><td>-0.89767388</td><td> 0.55674567</td><td>-1.1658087 </td><td>-0.9174741 </td></tr>
+	<tr><th scope="row">42</th><td>-1.62225369</td><td>-1.73753594</td><td>-1.3923993 </td><td>-1.1798595 </td></tr>
+	<tr><th scope="row">51</th><td> 1.39682886</td><td> 0.32731751</td><td> 0.5336209 </td><td> 0.2632600 </td></tr>
+	<tr><th scope="row">53</th><td> 1.27606556</td><td> 0.09788935</td><td> 0.6469162 </td><td> 0.3944526 </td></tr>
+	<tr><th scope="row">54</th><td>-0.41462067</td><td>-1.73753594</td><td> 0.1370873 </td><td> 0.1320673 </td></tr>
+	<tr><th scope="row">55</th><td> 0.79301235</td><td>-0.59039513</td><td> 0.4769732 </td><td> 0.3944526 </td></tr>
+	<tr><th scope="row">58</th><td>-1.13920048</td><td>-1.50810778</td><td>-0.2594462 </td><td>-0.2615107 </td></tr>
+	<tr><th scope="row">67</th><td>-0.29385737</td><td>-0.13153881</td><td> 0.4203256 </td><td> 0.3944526 </td></tr>
+	<tr><th scope="row">69</th><td> 0.43072244</td><td>-1.96696410</td><td> 0.4203256 </td><td> 0.3944526 </td></tr>
+	<tr><th scope="row">71</th><td> 0.06843254</td><td> 0.32731751</td><td> 0.5902685 </td><td> 0.7880307 </td></tr>
+	<tr><th scope="row">73</th><td> 0.55148575</td><td>-1.27867961</td><td> 0.6469162 </td><td> 0.3944526 </td></tr>
+	<tr><th scope="row">77</th><td> 1.15530226</td><td>-0.59039513</td><td> 0.5902685 </td><td> 0.2632600 </td></tr>
+	<tr><th scope="row">78</th><td> 1.03453895</td><td>-0.13153881</td><td> 0.7035638 </td><td> 0.6568380 </td></tr>
+	<tr><th scope="row">79</th><td> 0.18919584</td><td>-0.36096697</td><td> 0.4203256 </td><td> 0.3944526 </td></tr>
+	<tr><th scope="row">84</th><td> 0.18919584</td><td>-0.81982329</td><td> 0.7602115 </td><td> 0.5256453 </td></tr>
+	<tr><th scope="row">85</th><td>-0.53538397</td><td>-0.13153881</td><td> 0.4203256 </td><td> 0.3944526 </td></tr>
+	<tr><th scope="row">86</th><td> 0.18919584</td><td> 0.78617383</td><td> 0.4203256 </td><td> 0.5256453 </td></tr>
+	<tr><th scope="row">99</th><td>-0.89767388</td><td>-1.27867961</td><td>-0.4293892 </td><td>-0.1303181 </td></tr>
+	<tr><th scope="row">107</th><td>-1.13920048</td><td>-1.27867961</td><td> 0.4203256 </td><td> 0.6568380 </td></tr>
+	<tr><th scope="row">111</th><td> 0.79301235</td><td> 0.32731751</td><td> 0.7602115 </td><td> 1.0504160 </td></tr>
+	<tr><th scope="row">119</th><td> 2.24217198</td><td>-1.04925145</td><td> 1.7798692 </td><td> 1.4439941 </td></tr>
+	<tr><th scope="row">120</th><td> 0.18919584</td><td>-1.96696410</td><td> 0.7035638 </td><td> 0.3944526 </td></tr>
+	<tr><th scope="row">124</th><td> 0.55148575</td><td>-0.81982329</td><td> 0.6469162 </td><td> 0.7880307 </td></tr>
+	<tr><th scope="row">127</th><td> 0.43072244</td><td>-0.59039513</td><td> 0.5902685 </td><td> 0.7880307 </td></tr>
+	<tr><th scope="row">128</th><td> 0.30995914</td><td>-0.13153881</td><td> 0.6469162 </td><td> 0.7880307 </td></tr>
+	<tr><th scope="row">130</th><td> 1.63835547</td><td>-0.13153881</td><td> 1.1567451 </td><td> 0.5256453 </td></tr>
+	<tr><th scope="row">132</th><td> 2.48369858</td><td> 1.70388647</td><td> 1.4966310 </td><td> 1.0504160 </td></tr>
+	<tr><th scope="row">134</th><td> 0.55148575</td><td>-0.59039513</td><td> 0.7602115 </td><td> 0.3944526 </td></tr>
+	<tr><th scope="row">135</th><td> 0.30995914</td><td>-1.04925145</td><td> 1.0434497 </td><td> 0.2632600 </td></tr>
+	<tr><th scope="row">139</th><td> 0.18919584</td><td>-0.13153881</td><td> 0.5902685 </td><td> 0.7880307 </td></tr>
+	<tr><th scope="row">150</th><td> 0.06843254</td><td>-0.13153881</td><td> 0.7602115 </td><td> 0.7880307 </td></tr>
 </tbody>
 </table>
 
 
 
 
-<ol class=list-inline>
+<ol class="list-inline">
 	<li>16</li>
 	<li>24</li>
 	<li>42</li>
@@ -303,7 +303,7 @@ iris.svm$rho               #查看分类时的截距b
 
 
 
-<ol class=list-inline>
+<ol class="list-inline">
 	<li>-0.260498081180212</li>
 	<li>0.0200653246232933</li>
 	<li>-0.0872511895970034</li>

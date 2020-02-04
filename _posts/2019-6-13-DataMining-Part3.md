@@ -85,7 +85,7 @@ levels(data$subcategory_name)
     
 
 
-<ol class=list-inline>
+<ol class="list-inline">
 	<li>'Accessories'</li>
 	<li>'Bags'</li>
 	<li>'Base &amp; Top Coat'</li>
@@ -202,7 +202,7 @@ sum(itemFreq)  #1："平均一个transaction购买的item个数"
 ```
 
 
-<dl class=dl-horizontal>
+<dl class="dl-horizontal">
 	<dt>Accessories</dt>
 		<dd>0.00498575498575499</dd>
 	<dt>Bags</dt>
@@ -242,7 +242,7 @@ orderedItem[1:10]
 ```
 
 
-<dl class=dl-horizontal>
+<dl class="dl-horizontal">
 	<dt>Call to Action / Redemption</dt>
 		<dd>274</dd>
 	<dt>Lipstick</dt>
@@ -275,7 +275,7 @@ orderedItemFreq[1:10]
 ```
 
 
-<dl class=dl-horizontal>
+<dl class="dl-horizontal">
 	<dt>Call to Action / Redemption</dt>
 		<dd>0.195156695156695</dd>
 	<dt>Lipstick</dt>
@@ -524,12 +524,12 @@ head(rules_df)
 
 
 <table>
-<thead><tr><th scope=col>rules</th><th scope=col>support</th><th scope=col>confidence</th><th scope=col>lift</th><th scope=col>count</th></tr></thead>
+<thead><tr><th scope="col">rules</th><th scope="col">support</th><th scope="col">confidence</th><th scope="col">lift</th><th scope="col">count</th></tr></thead>
 <tbody>
-	<tr><td><span style=white-space:pre-wrap>{Lip Liner} =&gt; {Lipstick}                  </span></td><td>0.01210826                                                                            </td><td>0.34000000                                                                            </td><td>2.824615                                                                              </td><td>17                                                                                    </td></tr>
-	<tr><td><span style=white-space:pre-wrap>{Lipstick} =&gt; {Lip Liner}                  </span></td><td>0.01210826                                                                            </td><td>0.10059172                                                                            </td><td>2.824615                                                                              </td><td>17                                                                                    </td></tr>
-	<tr><td><span style=white-space:pre-wrap>{Makeup} =&gt; {Foundation}                   </span></td><td>0.01139601                                                                            </td><td>0.34042553                                                                            </td><td>2.844985                                                                              </td><td>16                                                                                    </td></tr>
-	<tr><td><span style=white-space:pre-wrap>{Foundation} =&gt; {Makeup}                   </span></td><td>0.01139601                                                                            </td><td>0.09523810                                                                            </td><td>2.844985                                                                              </td><td>16                                                                                    </td></tr>
+	<tr><td><span style="white-space:pre-wrap">{Lip Liner} =&gt; {Lipstick}                  </span></td><td>0.01210826                                                                            </td><td>0.34000000                                                                            </td><td>2.824615                                                                              </td><td>17                                                                                    </td></tr>
+	<tr><td><span style="white-space:pre-wrap">{Lipstick} =&gt; {Lip Liner}                  </span></td><td>0.01210826                                                                            </td><td>0.10059172                                                                            </td><td>2.824615                                                                              </td><td>17                                                                                    </td></tr>
+	<tr><td><span style="white-space:pre-wrap">{Makeup} =&gt; {Foundation}                   </span></td><td>0.01139601                                                                            </td><td>0.34042553                                                                            </td><td>2.844985                                                                              </td><td>16                                                                                    </td></tr>
+	<tr><td><span style="white-space:pre-wrap">{Foundation} =&gt; {Makeup}                   </span></td><td>0.01139601                                                                            </td><td>0.09523810                                                                            </td><td>2.844985                                                                              </td><td>16                                                                                    </td></tr>
 	<tr><td>{Lip Care} =&gt; {Call to Action / Redemption}</td><td>0.01068376                                    </td><td>0.23437500                                    </td><td>1.200958                                      </td><td>15                                            </td></tr>
 	<tr><td>{Call to Action / Redemption} =&gt; {Lip Care}</td><td>0.01068376                                    </td><td>0.05474453                                    </td><td>1.200958                                      </td><td>15                                            </td></tr>
 </tbody>

@@ -66,11 +66,11 @@ $d_{AB}=|x_A-x_B|+|y_A-y_B|$
 2. Euclidean distance  
 $d_{ij}(2)=(\sum_{k=1}^{p}|x_{ik}-x_{jk}|^2)^{1/2}$  
 $d_{AB}=\sqrt{(x_A-x_B)^2+(y_A-y_B)^2}$  
- * <font color='#9a4238'>the most frequently used  
+ * the most frequently used  
  * 优点：有非常明确的空间距离概念
  * 缺点  
     没有区分量纲的不同，将所有变量视为影响相同的 —— 适用于已做标准化处理的数据（preprocessed data）  
-    受维度的影响？</font>  
+    受维度的影响？
 
 3. Chebyshev distance  
 $d_{ij}(\inf)=max|x_{ik}-x_{jk}|$  
@@ -163,7 +163,7 @@ head(data)
 
 
 <table>
-<thead><tr><th scope=col>Country.or.Area</th><th scope=col>D1</th><th scope=col>D12</th><th scope=col>D13</th><th scope=col>D15</th><th scope=col>D16</th><th scope=col>D17</th><th scope=col>D18</th><th scope=col>D2</th><th scope=col>D5</th><th scope=col>...</th><th scope=col>R14F</th><th scope=col>R14M</th><th scope=col>R14B</th><th scope=col>R6F</th><th scope=col>R6M</th><th scope=col>R6B</th><th scope=col>R8R</th><th scope=col>R8U</th><th scope=col>R9R</th><th scope=col>R9U</th></tr></thead>
+<thead><tr><th scope="col">Country.or.Area</th><th scope="col">D1</th><th scope="col">D12</th><th scope="col">D13</th><th scope="col">D15</th><th scope="col">D16</th><th scope="col">D17</th><th scope="col">D18</th><th scope="col">D2</th><th scope="col">D5</th><th scope="col">...</th><th scope="col">R14F</th><th scope="col">R14M</th><th scope="col">R14B</th><th scope="col">R6F</th><th scope="col">R6M</th><th scope="col">R6B</th><th scope="col">R8R</th><th scope="col">R8U</th><th scope="col">R9R</th><th scope="col">R9U</th></tr></thead>
 <tbody>
 	<tr><td>Afghanistan        </td><td>-2.4               </td><td>29825              </td><td>24                 </td><td>16.20              </td><td> 3.82              </td><td>47.42              </td><td>5.14               </td><td> 60                </td><td>35.3               </td><td>...                </td><td> 9.5               </td><td> 8.9               </td><td> 9.2               </td><td> 3.200             </td><td>13.100             </td><td> 9.800             </td><td>56                 </td><td>90                 </td><td>23                 </td><td>47                 </td></tr>
 	<tr><td>Albania            </td><td>-0.3               </td><td> 3162              </td><td>55                 </td><td>32.56              </td><td>14.93              </td><td>21.33              </td><td>1.76               </td><td>111                </td><td>12.8               </td><td>...                </td><td> 9.0               </td><td>10.3               </td><td> 9.6               </td><td> 6.700             </td><td>17.600             </td><td>11.800             </td><td>94                 </td><td>97                 </td><td>86                 </td><td>95                 </td></tr>
@@ -282,7 +282,7 @@ EM与K-means的异同：
 
 ## 系统聚类
 
-<font size=3>**to get a basic idea**</font>   
+<font size="3">**to get a basic idea**</font>   
 the heatmap function is very quick to visualize the organization of these high dimensional data
 
 
@@ -326,12 +326,12 @@ train=iris[loc,]
 test=iris[-loc,]
 ```
 
-<font size=3><b>?dist</b></font>  
+<font size="3"><b>?dist</b></font>  
 ><font color="red"> 默认欧氏距离</font>  
 
 注意之前提到过，欧式距离受量纲影响，因此适用于经过了标准化的数据  
 
-<font size=3><b>?rect.hclust</b></font>  
+<font size="3"><b>?rect.hclust</b></font>  
 > Draws rectangles around the branches of a dendrogram highlighting the corresponding clusters.
 
 
@@ -354,7 +354,7 @@ iris.id
 ```
 
 
-<ol class=list-inline>
+<ol class="list-inline">
 	<li>1</li>
 	<li>1</li>
 	<li>1</li>
@@ -509,7 +509,7 @@ iris.id
 
 
 
-<font size=4>choose(n,k)</font>  
+<font size="4">choose(n,k)</font>  
 >返回$C_n^k$的值，即$\frac{n!}{(n-k)!k!}$
 
 ## 聚类评价
