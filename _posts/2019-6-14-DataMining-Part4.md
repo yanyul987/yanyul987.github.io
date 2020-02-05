@@ -13,7 +13,7 @@ excerpt_separator: <!--more-->
 # 树
 
 ## Intuition  
-![tree](/assets/images/201906DataMining/tree_pic01.png)
+![tree](/assets/images/201906DataMining/tree_pic01.jpg)
 
 ## 单棵树
 
