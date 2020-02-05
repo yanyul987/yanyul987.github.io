@@ -1,6 +1,6 @@
 ---
 published: true
-title: R-ggplot2作图
+title: R-ggplot2绘制柱状图
 category: Data Visualization
 tags: 
   - ggplot2
@@ -8,14 +8,9 @@ layout: post
 excerpt_separator: <!--more-->
 ---
 
-<h1>Table of Contents<span class="tocSkip"></span></h1>
-<div class="toc"><ul class="toc-item"><li><span><a href="#柱状图" data-toc-modified-id="柱状图-1"><span class="toc-item-num">1&nbsp;&nbsp;</span>柱状图</a></span><ul class="toc-item"><li><span><a href="#创建数据" data-toc-modified-id="创建数据-1.1"><span class="toc-item-num">1.1&nbsp;&nbsp;</span>创建数据</a></span></li><li><span><a href="#绘制柱状图" data-toc-modified-id="绘制柱状图-1.2"><span class="toc-item-num">1.2&nbsp;&nbsp;</span>绘制柱状图</a></span></li><li><span><a href="#添加数值标签" data-toc-modified-id="添加数值标签-1.3"><span class="toc-item-num">1.3&nbsp;&nbsp;</span>添加数值标签</a></span></li><li><span><a href="#旋转横坐标标签、变更横纵坐标名称、设置标题" data-toc-modified-id="旋转横坐标标签、变更横纵坐标名称、设置标题-1.4"><span class="toc-item-num">1.4&nbsp;&nbsp;</span>旋转横坐标标签、变更横纵坐标名称、设置标题</a></span></li><li><span><a href="#标签自动换行" data-toc-modified-id="标签自动换行-1.5"><span class="toc-item-num">1.5&nbsp;&nbsp;</span>标签自动换行</a></span></li><li><span><a href="#填充颜色" data-toc-modified-id="填充颜色-1.6"><span class="toc-item-num">1.6&nbsp;&nbsp;</span>填充颜色</a></span></li><li><span><a href="#主题设置" data-toc-modified-id="主题设置-1.7"><span class="toc-item-num">1.7&nbsp;&nbsp;</span>主题设置</a></span></li><li><span><a href="#排序" data-toc-modified-id="排序-1.8"><span class="toc-item-num">1.8&nbsp;&nbsp;</span>排序</a></span></li></ul></li></ul></div>
 
-<!--more-->
 
-## 柱状图
-
-### 创建数据
+# 创建数据
 
 
 ```R
@@ -42,7 +37,8 @@ data=data.frame(cut=c("Fair","Good","Very Good","Premium","Ideal"),
 
 
 
-### 绘制柱状图
+<!--more-->
+# 绘制柱状图
 
 
 ```R
@@ -59,7 +55,7 @@ p1
 ![png](/assets/images/20190303ggplot2/output_6_0.png)
 
 
-### 添加数值标签
+# 添加数值标签
 
 
 ```R
@@ -73,7 +69,7 @@ p2
 ![png](/assets/images/20190303ggplot2/output_8_0.png)
 
 
-### 旋转横坐标标签、变更横纵坐标名称、设置标题
+# 旋转横坐标标签、变更横纵坐标名称、设置标题
 
 
 ```R
@@ -96,7 +92,7 @@ p3
 ![png](/assets/images/20190303ggplot2/output_10_0.png)
 
 
-### 标签自动换行
+# 标签自动换行
 面对过长的标签，一种办法是旋转90°，另一种方法是设置标签达到一定长度后自动换行  
 对于英文同样适用
 
@@ -113,7 +109,7 @@ p4
 ![png](/assets/images/20190303ggplot2/output_12_0.png)
 
 
-### 填充颜色
+# 填充颜色
 
 
 ```R
@@ -161,7 +157,7 @@ p7
 ![png](/assets/images/20190303ggplot2/output_18_0.png)
 
 
-**<font size=3>色板一览</font>**
+**<font size="3">色板一览</font>**
 
 
 ```R
@@ -201,7 +197,7 @@ multiplot(p1,p2,p3,p4,cols=2)
 ![png](/assets/images/20190303ggplot2/output_21_0.png)
 
 
-### 主题设置
+# 主题设置
 
 
 ```R
@@ -255,7 +251,7 @@ multiplot(p1,p2,p3,p4,cols=2)
 ![png](/assets/images/20190303ggplot2/output_25_1.png)
 
 
-### 排序
+# 排序
 
 
 ```R
