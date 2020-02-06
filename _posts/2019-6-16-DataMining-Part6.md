@@ -31,7 +31,7 @@ example used through out: hand-written digits recognition
 3. 结构图里的关键不是圆圈（代表“神经元”），而是连接线（代表“神经元”之间的连接）。每个连接线对应一个不同的权重（其值称为权值），这是需要训练得到的。一个神经网络的训练算法就是**让权重的值调整到最佳**，以使得整个网络的预测效果最好。  
 4. 通常我们说$k$层神经网络，是说有多少个连接层而非节点层。  
 
-![basic](/assets/images/201906DataMining/nnet_pic00.jpg)
+![basic](/assets/images/201906DataMining/nnet_pic00.jpg){:height="75%" width="75%"}
 
 ## The HISTORY of NNET  
 ### MP模型/神经元模型  
@@ -137,7 +137,7 @@ using a randomly labeled data on the otherhand does not
 
 ## BP神经网络
 
-<font size=3>* 特点：两层激活，从后向前（先C-B再B-A）  
+<font size="3">* 特点：两层激活，从后向前（先C-B再B-A）  
 ![BP](/assets/images/201906DataMining/nnet_pic05.png)    
   
 * A 输入层，下标i  
