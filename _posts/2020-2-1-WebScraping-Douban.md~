@@ -24,6 +24,10 @@ from selenium import webdriver
 
 ```python
 url = "https://movie.douban.com/explore#!type=movie&tag=%E7%83%AD%E9%97%A8&sort=recommend&page_limit=20&page_start=60"
+```
+
+
+```python
 driver = webdriver.Chrome()
 ```
 
