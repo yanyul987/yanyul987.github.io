@@ -12,6 +12,15 @@
 </div>
 
 {% if site.copyright %}
+
+<div class="powered-by">
+<span id="busuanzi_container_site_uv">
+  本站访客数:
+<span id="busuanzi_value_site_uv"></span>
+</span>
+&emsp;|&emsp;
+</div>
+
 <div class="powered-by">
   {{ __.footer.powered | replace: '%s', '<a class="theme-link" href="https://jekyllrb.com">Jekyll</a>') }}
 </div>
@@ -21,13 +30,8 @@
   <a class="theme-link" href="https://github.com/simpleyyt/jekyll-theme-next">
     NexT.{{ site.scheme }}
   </a>
+
 </div>
 
-<div class="powered-by">
-&emsp;|&emsp;
-<span id="busuanzi_container_site_uv">
-  本站访客数:
-<span id="busuanzi_value_site_uv"></span>
-</span>
-</div>
+
 {% endif %}
