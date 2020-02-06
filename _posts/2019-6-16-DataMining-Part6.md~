@@ -31,7 +31,7 @@ example used through out: hand-written digits recognition
 3. 结构图里的关键不是圆圈（代表“神经元”），而是连接线（代表“神经元”之间的连接）。每个连接线对应一个不同的权重（其值称为权值），这是需要训练得到的。一个神经网络的训练算法就是**让权重的值调整到最佳**，以使得整个网络的预测效果最好。  
 4. 通常我们说$k$层神经网络，是说有多少个连接层而非节点层。  
 
-![basic](/assets/images/201906DataMining/nnet_pic00.jpg){:width="50%"}
+![basic](/assets/images/201906DataMining/nnet_pic00.jpg){:height="75%" width="75%"}
 
 ## The HISTORY of NNET  
 ### MP模型/神经元模型  
@@ -41,15 +41,15 @@ example used through out: hand-written digits recognition
 
 ### 单层神经网络（单连接层，两层神经元，感知器模型）
  * 首个可以学习的人工神经网络  
- ![单层](/assets/images/201906DataMining/nnet_pic02.jpg){:width="100"}  
+ ![单层](/assets/images/201906DataMining/nnet_pic02.jpg)  
  * 从前一层到后一层的计算可以用矩阵表示：$g(W \cdot a) = z$  
  * 与神经元模型不同，感知器中的权值是通过训练得到的。感知器类似一个逻辑回归模型，可以做线性分类任务。决策分界就是在二维的数据平面中划出一条直线，当数据的维度是3维的时候，就是划出一个平面，当数据的维度是n维时，就是划出一个n-1维的超平面。  
  * 感知器模型只能做线性分类任务，对XOR（异或）这样的简单分类任务都无法解决。
 
 ### 两层神经网络（多层感知器）  
  * 1986年，Rumelhar和Hinton等人提出了反向传播（Backpropagation，BP）算法，解决了两层神经网络所需要的复杂计算量问题。【BP算法是两层神经网络的计算思路】  
-![两层1](/assets/images/201906DataMining/nnet_pic03.jpg){:width="70"}   
-![两层2](/assets/images/201906DataMining/nnet_pic04.jpg){:width="50"}  
+![两层1](/assets/images/201906DataMining/nnet_pic03.jpg)   
+![两层2](/assets/images/201906DataMining/nnet_pic04.jpg)  
  * 进一步考虑偏置（bias），矩阵表示为：  
 $g(W(1) \cdot a(1)+b(1)) = a(2)$   
 $g(W(2) \cdot a(2)+b(2)) = z$
@@ -110,7 +110,7 @@ for example a **sigmoid function**
   
 * we can look at what each layer does by visualizing the weight (not the weight matrix, but each 1*781 row of the matrix, and reshape it into a 28$\times$28 small matrix) ( to see what importance and what directions it gives to each neurons in the previous layer)  
 
-![connections](/assets/images/201906DataMining/nnet_pic01.jpg){:width="60%", height="60%"}  
+![connections](/assets/images/201906DataMining/nnet_pic01.jpg)  
 我们使用a来表示输入，用w来表示权值。一个表示连接的有向箭头可以这样理解：在初端，传递的信号大小仍然是a，端中间有加权参数w，经过这个加权后的信号会变成a$\times$w，因此在连接的末端，信号的大小就变成了a$\times$w。  
 z在输入和权值的线性加权和（$\sum(a\cdot w)$）叠加了一个激活函数$g()$的值。在MP模型里，激活函数$g()$是$sgn$函数，更常用的是$sigmoid$和$ReLU$等  
 
