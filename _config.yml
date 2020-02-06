@@ -18,6 +18,9 @@ url:
 baseurl:
 permalink: pretty
 
+# Google Analytics
+google_analytics: UA-157913899-1
+
 # Pagination
 paginate: 10
 #paginate_path: "/page:num/"
