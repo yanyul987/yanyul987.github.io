@@ -126,7 +126,7 @@ head(countrylist, n = 20)
 ```
 
 
-<ol class=list-inline>
+<ol class="list-inline">
 	<li>'Aruba'</li>
 	<li>'Afghanistan'</li>
 	<li>'Angola'</li>
@@ -159,7 +159,7 @@ levels(data$country) %>% head(n = 20)
 ```
 
 
-<ol class=list-inline>
+<ol class="list-inline">
 	<li>'Afghanistan'</li>
 	<li>'Albania'</li>
 	<li>'Antigua and Barbuda'</li>
