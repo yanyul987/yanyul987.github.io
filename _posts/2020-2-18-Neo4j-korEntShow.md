@@ -12,7 +12,8 @@ layout: post
 excerpt_separator: <!--more-->
 ---
 
-![img]('/assets/images/20200218neo4j/graph_5_pdshow.png')
+![png](/assets/images/20200218neo4j/graph_0_naPD.png)
+
 <!--more-->
 
 ## 爬虫获取综艺节目数据  
@@ -90,12 +91,9 @@ print(f"Got {dfshow.shape[0]} entertainment shows. ")
 ```python
 dfshow["link"] = link
 dfshow.head()
-pd.pivot_table(dfshow, index="country", values="name", aggfunc="count")
+# pd.pivot_table(dfshow, index="country", values="name", aggfunc="count")
 # dfshow.to_excel("korEntShow2.xlsx")
 ```
-
-
-
 
 <div>
 <style scoped>
@@ -121,7 +119,6 @@ pd.pivot_table(dfshow, index="country", values="name", aggfunc="count")
       <th>director</th>
       <th>episodes</th>
       <th>lang</th>
-      <th>link</th>
       <th>name</th>
       <th>type</th>
       <th>year</th>
@@ -136,7 +133,6 @@ pd.pivot_table(dfshow, index="country", values="name", aggfunc="count")
       <td>罗英石</td>
       <td>100分钟</td>
       <td>韩语</td>
-      <td>https://movie.douban.com/subject/30394638/?tag...</td>
       <td>姜食堂 第二季 강식당  시즌2</td>
       <td>真人秀</td>
       <td>2019</td>
@@ -149,7 +145,6 @@ pd.pivot_table(dfshow, index="country", values="name", aggfunc="count")
       <td>罗英石</td>
       <td>100分钟</td>
       <td>韩语</td>
-      <td>https://movie.douban.com/subject/33441897/?tag...</td>
       <td>姜食堂 第三季 강식당 시즌3</td>
       <td>真人秀</td>
       <td>2019</td>
@@ -162,7 +157,6 @@ pd.pivot_table(dfshow, index="country", values="name", aggfunc="count")
       <td>NaN</td>
       <td>80分钟</td>
       <td>汉语普通话</td>
-      <td>https://movie.douban.com/subject/26923099/?tag...</td>
       <td>非正式会谈 第三季</td>
       <td>真人秀</td>
       <td>2016</td>
@@ -175,7 +169,6 @@ pd.pivot_table(dfshow, index="country", values="name", aggfunc="count")
       <td>蔡欢</td>
       <td>99分钟</td>
       <td>汉语普通话</td>
-      <td>https://movie.douban.com/subject/33446535/?tag...</td>
       <td>妻子的浪漫旅行 第三季</td>
       <td>真人秀</td>
       <td>2019</td>
@@ -188,7 +181,6 @@ pd.pivot_table(dfshow, index="country", values="name", aggfunc="count")
       <td>郑中渊</td>
       <td>75分钟</td>
       <td>韩语</td>
-      <td>https://movie.douban.com/subject/30465928/?tag...</td>
       <td>大逃脱 第二季 대탈출 시즌2</td>
       <td>真人秀</td>
       <td>2019</td>
@@ -196,66 +188,6 @@ pd.pivot_table(dfshow, index="country", values="name", aggfunc="count")
   </tbody>
 </table>
 </div>
-
-
-
-
-
-
-<div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
-<table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th>name</th>
-    </tr>
-    <tr>
-      <th>country</th>
-      <th></th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>中国台湾</th>
-      <td>1</td>
-    </tr>
-    <tr>
-      <th>中国大陆</th>
-      <td>143</td>
-    </tr>
-    <tr>
-      <th>中国香港</th>
-      <td>1</td>
-    </tr>
-    <tr>
-      <th>日本</th>
-      <td>1</td>
-    </tr>
-    <tr>
-      <th>美国</th>
-      <td>3</td>
-    </tr>
-    <tr>
-      <th>韩国</th>
-      <td>31</td>
-    </tr>
-  </tbody>
-</table>
-</div>
-
 
 
 ## Neo4j
@@ -301,7 +233,7 @@ dfshow.columns
 
 
 ```python
-graph = Graph(host="localhost", auth=("neo4j", "code881881")) # 不用localhost:7687或者localhost:7474，自动加上了7687
+graph = Graph(host="localhost", auth=("neo4j", "123456")) # 不用localhost:7687或者localhost:7474，自动加上了7687
 ```
 
 Step 1: 既创建show结点，也创建演员集合actorset
@@ -324,7 +256,7 @@ print('Created show nodes successfully!')
     Created show nodes successfully!
     
 
-![img]('/assets/images/20200218neo4j/graph_1_allshow.png'){:width=500}
+![img](/assets/images/20200218neo4j/graph_1_allshow.png){:width=500}
 
 Step 2: 创建演员结点
 
@@ -339,7 +271,7 @@ print(f'create {len(actorset)} actor nodes successfully!')
     create 198 actor nodes successfully!
     
 
-![img]('/assets/images/20200218neo4j/graph_2_allactor.png'){:width=500}
+![img](/assets/images/20200218neo4j/graph_2_allactor.png){:width=500}
 
 Step 3: 创建演员->综艺节目的关系  
 需要先MATCH到actor/show结点  
@@ -517,7 +449,7 @@ print('create relationships successfully!')
     create relationships successfully!
     
 
-![img]('/assets/images/20200218neo4j/graph_3_actorshow.png'){:width=500}  
+![img](/assets/images/20200218neo4j/graph_3_actorshow.png){:width=500}  
 Produce 101第二季...This is crazy!
 
 
@@ -539,7 +471,7 @@ print('create relationships successfully!')
     create relationships successfully!
     
 
-![img]('/assets/images/20200218neo4j/graph_4_actorshow.png'){:width=500}  
+![img](/assets/images/20200218neo4j/graph_4_actorshow.png){:width=500}  
 姜食堂3新入成员曹圭贤！
 
 Step 3: 把PD们也加上，思路和前两步差不多  
@@ -595,5 +527,5 @@ print('create relationships successfully!')
     create relationships successfully!
     
 
-![img]('/assets/images/20200218neo4j/graph_5_pdshow.png'){:width=500}  
+![img](/assets/images/20200218neo4j/graph_5_pdshow.png){:width=500}  
 罗导真是高产似..
