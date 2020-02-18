@@ -221,7 +221,7 @@ dfshow.columns
 
 
 **Graph()连接Neo4j**  
-注意需要现在命令行开启Neo4j service  
+注意需要先在命令行开启Neo4j service  
     neo4j install-service  
     neo4j start
 
