@@ -320,8 +320,11 @@ m2.to_data_frame()
     .dataframe thead th {
         text-align: right;
     }
+
+    .th{width:50px;}
+    .td{width:200px;}
 </style>
-<table border="1" class="dataframe" width="300">
+<table width="300" border="1" class="dataframe">
   <thead>
     <tr style="text-align: right;">
       <th></th>
@@ -347,19 +350,10 @@ m2.to_data_frame()
 
 <div>
 <style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
+    .th{width:50px;}
+    .td{width:200px;}
 </style>
-<table border="1" class="dataframe" width="300">
+<table width="300" border="1" class="dataframe">
   <thead>
     <tr style="text-align: right;">
       <th></th>
