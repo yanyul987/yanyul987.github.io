@@ -14,10 +14,10 @@ excerpt_separator: <!--more-->
 
 ![png](/assets/images/20200218neo4j/graph_0_naPD.png)
 
-<!--more-->
-
 ## 爬虫获取综艺节目数据  
 yay，又是豆瓣
+
+<!--more-->
 
 
 ```python
@@ -214,12 +214,6 @@ dfshow.columns
 
 
     (31, 10)
-
-
-
-
-
-
     Index(['actor', 'country', 'date', 'director', 'episodes', 'lang', 'link',
            'name', 'type', 'year'],
           dtype='object')
@@ -236,7 +230,7 @@ dfshow.columns
 graph = Graph(host="localhost", auth=("neo4j", "123456")) # 不用localhost:7687或者localhost:7474，自动加上了7687
 ```
 
-Step 1: 既创建show结点，也创建演员集合actorset
+<b>Step 1: 既创建show结点，也创建演员集合actorset</b>
 
 
 ```python
@@ -258,7 +252,7 @@ print('Created show nodes successfully!')
 
 ![img](/assets/images/20200218neo4j/graph_1_allshow.png){:width=500}
 
-Step 2: 创建演员结点
+<b>Step 2: 创建演员结点</b>  
 
 
 ```python
@@ -273,7 +267,7 @@ print(f'create {len(actorset)} actor nodes successfully!')
 
 ![img](/assets/images/20200218neo4j/graph_2_allactor.png){:width=500}
 
-Step 3: 创建演员->综艺节目的关系  
+<b>Step 3: 创建演员->综艺节目的关系</b>  
 需要先MATCH到actor/show结点  
 而MATCH结点可以有下面两种做法
 
@@ -327,7 +321,7 @@ m2.to_data_frame()
         text-align: right;
     }
 </style>
-<table border="1" class="dataframe">
+<table border="1" class="dataframe" width="300">
   <thead>
     <tr style="text-align: right;">
       <th></th>
@@ -365,7 +359,7 @@ m2.to_data_frame()
         text-align: right;
     }
 </style>
-<table border="1" class="dataframe">
+<table border="1" class="dataframe" width="300">
   <thead>
     <tr style="text-align: right;">
       <th></th>
@@ -402,13 +396,7 @@ list(matcher.match("actor").where("_.name='殷志源'"))
 
 
     <py2neo.matching.NodeMatch at 0x1c71cfe6b00>
-
-
-
-
-
-
-    [(_317:actor {name: '\u6bb7\u5fd7\u6e90'})]
+   [(_317:actor {name: '\u6bb7\u5fd7\u6e90'})]
 
 
 
