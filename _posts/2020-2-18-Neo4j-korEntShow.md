@@ -96,22 +96,16 @@ dfshow.head()
 ```
 
 <div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
+<style>
+    .dataframe thead tr th {text-align: middle;}
+    .dataframe tbody tr th {width:30px;vertical-align: middle;}
+    .actor {width:110px}
+    .name {width:110px}
 </style>
+
 <table border="1" class="dataframe">
   <thead>
-    <tr style="text-align: right;">
+    <tr>
       <th></th>
       <th>actor</th>
       <th>country</th>
@@ -127,61 +121,49 @@ dfshow.head()
   <tbody>
     <tr>
       <th>0</th>
-      <td>姜虎东 / 李寿根 / 殷志源 / 安宰贤 / 宋旻浩 / 表志勋</td>
+      <td class="actor">姜虎东 / 李寿根 / 殷志源 / 安宰贤 / 宋旻浩 / 表志勋</td>
       <td>韩国</td>
       <td>2019-05-31(韩国)</td>
       <td>罗英石</td>
       <td>100分钟</td>
       <td>韩语</td>
-      <td>姜食堂 第二季 강식당  시즌2</td>
+      <td class="name">姜食堂 第二季 강식당  시즌2</td>
       <td>真人秀</td>
       <td>2019</td>
     </tr>
     <tr>
       <th>1</th>
-      <td>姜虎东 / 李寿根 / 殷志源 / 安宰贤 / 曹圭贤 / 宋旻浩 / 表志勋</td>
+      <td class="actor">姜虎东 / 李寿根 / 殷志源 / 安宰贤 / 曹圭贤 / 宋旻浩 / 表志勋</td>
       <td>韩国</td>
       <td>2019-07-05(韩国)</td>
       <td>罗英石</td>
       <td>100分钟</td>
       <td>韩语</td>
-      <td>姜食堂 第三季 강식당 시즌3</td>
+      <td class="name">姜食堂 第三季 강식당 시즌3</td>
       <td>真人秀</td>
       <td>2019</td>
     </tr>
     <tr>
       <th>2</th>
-      <td>大左 / 杨迪 / 贝乐泰 / 功必扬 / 华波波 / 浅井悠佑 / 田原皓 / 陈铭 / 陈超</td>
+      <td class="actor">大左 / 杨迪 / 贝乐泰 / 功必扬 / 华波波 / 浅井悠佑 / 田原皓 / 陈铭 / 陈超</td>
       <td>中国大陆</td>
       <td>2016-12-09(中国大陆)</td>
       <td>NaN</td>
       <td>80分钟</td>
       <td>汉语普通话</td>
-      <td>非正式会谈 第三季</td>
+      <td class="name">非正式会谈 第三季</td>
       <td>真人秀</td>
       <td>2016</td>
     </tr>
     <tr>
       <th>3</th>
-      <td>谢娜 / 李娜 / 杨千嬅 / 霍思燕 / 唐一菲 / 魏大勋 / 丁子高 / 杜江 / 凌...</td>
+      <td class="actor">谢娜 / 李娜 / 杨千嬅 / 霍思燕 / 唐一菲 / 魏大勋 / 丁子高 / 杜江 / 凌...</td>
       <td>中国大陆</td>
       <td>2019-11-06(中国大陆)</td>
       <td>蔡欢</td>
       <td>99分钟</td>
       <td>汉语普通话</td>
-      <td>妻子的浪漫旅行 第三季</td>
-      <td>真人秀</td>
-      <td>2019</td>
-    </tr>
-    <tr>
-      <th>4</th>
-      <td>姜虎东 / 金钟民 / 金东炫 / 申东熙 / 柳炳宰 / 表志勋</td>
-      <td>韩国</td>
-      <td>2019-03-17(韩国)</td>
-      <td>郑中渊</td>
-      <td>75分钟</td>
-      <td>韩语</td>
-      <td>大逃脱 第二季 대탈출 시즌2</td>
+      <td class="name">妻子的浪漫旅行 第三季</td>
       <td>真人秀</td>
       <td>2019</td>
     </tr>
@@ -309,24 +291,15 @@ m2.to_data_frame()
 
 <div>
 <style>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: left;
-    }
-
-    .th{width:50px;}
-    .td{width:200px;}
+    .dataframe thead tr th {text-align: middle;}
+    .dataframe tbody tr th {vertical-align: middle;}
+    .dataframe tbody tr th{width:30px;}
+    .dataframe tbody tr td{width:300px;}
 </style>
-<table width="300" border="1" class="dataframe">
+
+<table border="1" class="dataframe">
   <thead>
-    <tr style="text-align: left;">
+    <tr>
       <th></th>
       <th>a</th>
     </tr>
@@ -349,13 +322,15 @@ m2.to_data_frame()
 
 
 <div>
-<style scoped>
-    .th{width:50px;}
-    .td{width:200px;}
+<style>
+    .dataframe thead tr th {text-align: middle;}
+    .dataframe tbody tr th {vertical-align: middle;}
+    .dataframe tbody tr th{width:30px;}
+    .dataframe tbody tr td{width:300px;}
 </style>
-<table width="300" border="1" class="dataframe">
+<table border="1" class="dataframe">
   <thead>
-    <tr style="text-align: left;">
+    <tr>
       <th></th>
       <th>b</th>
     </tr>
