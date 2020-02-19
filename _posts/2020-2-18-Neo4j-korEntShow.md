@@ -308,7 +308,7 @@ m2.to_data_frame()
 
 
 <div>
-<style scoped>
+<style>
     .dataframe tbody tr th:only-of-type {
         vertical-align: middle;
     }
@@ -318,7 +318,7 @@ m2.to_data_frame()
     }
 
     .dataframe thead th {
-        text-align: right;
+        text-align: left;
     }
 
     .th{width:50px;}
@@ -326,7 +326,7 @@ m2.to_data_frame()
 </style>
 <table width="300" border="1" class="dataframe">
   <thead>
-    <tr style="text-align: right;">
+    <tr style="text-align: left;">
       <th></th>
       <th>a</th>
     </tr>
@@ -355,7 +355,7 @@ m2.to_data_frame()
 </style>
 <table width="300" border="1" class="dataframe">
   <thead>
-    <tr style="text-align: right;">
+    <tr style="text-align: left;">
       <th></th>
       <th>b</th>
     </tr>

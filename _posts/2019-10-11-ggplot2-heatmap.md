@@ -234,8 +234,7 @@ df[!df$match,] # 查看df中match为0的行
 
 
 
-我已经事先将需要替换的数据整理到dfreplace中，  
-要注意这一步是纯手工操作，没有捷径可走。
+可以事先将需要替换的数据保存到excel表，之后可以直接调用。
 
 
 ```R
@@ -351,7 +350,7 @@ if (FALSE) { # if(FALSE) {...} 括号中的内容将不被执行，可当作多�
     }
     data$country=as.factor(data$country)
 }
-#再检查一次未匹配的国家名
+#再检查一次未匹配的国家/地区名
 df=data.frame(country=unique(data$country))
 df$match=(df$country %in% countrylist)
 df[!df$match,]
@@ -377,7 +376,7 @@ df[!df$match,]
 
 
 
-只剩下一些地图数据中没有的国家，在此不做处理。
+只剩下一些地图数据中没有的国家/地区，在此不做处理。
 
 ## <font>绘图最终准备：将notification数据加入到mapWLD中</font>  
 由于ggplot函数要用地图数据框mapWLD绘制地图  
@@ -498,8 +497,6 @@ mapWLD=mapWLD[order(mapWLD$order),] # 将mapWLD再按照order由小到大的顺�
 ```R
 options(repr.plot.width=7,repr.plot.height=3.5) # 这一句只是在设置长宽比，不设置也可以
 # win.graph(width=7, height=3.5)
-    # 要注意，在R中设置长宽比的语句是win.graph(width=7, height=3.5)，而不是上面这一句options()
-    # options只是在jupyter notebook中好用
 ggplot()+
   geom_polygon(data = mapWLD, aes(x = long, y = lat, group = group))
 ```
@@ -521,7 +518,7 @@ ggplot()+
 pic0 = ggplot()+
   geom_polygon(data = mapWLD, 
     aes(x = long, y = lat, group = group, fill = count), 
-    color = "grey60", size = 0.05)+ # 调整了地图边线的颜色（浅灰）和粗细（0.05)，使其更美观
+    color = "grey60", size = 0.05)+ # 调整了地图边线的颜色（浅灰）和粗细（0.05），看起来觉得舒服就行
   scale_fill_gradient(name="Count of\nnotifications",
     low="#FFF5F0",high="#A50F15", na.value = "#F2F2F2")+ 
      # scale_fill_gradient()设置了渐变填充颜色的两个端点值，以及当count为NA时的值
@@ -536,11 +533,11 @@ pic0
 ## <font>细节调整</font>
 
 最后可以微调更多细节使图片更好看  
-我觉得这也是ggplot绘图的优势所在  
+我觉得这也是ggplot的一大优势  
 并不是说折线图/散点图/柱状图/热力图别的软件绘制不了  
 而是每一个部分都可以很灵活地调整  
 <br />  
-大家可以将下面的每个语句删掉再加上，调整设置的具体数值，感受一下它们起到的作用  
+可以将下面的每个语句删掉再加上，调整设置的具体数值，感受一下它们起到的作用  
 想查看具体可以做出哪些设置，可以运行下面这一句：  
 ?ggplot::theme
 
@@ -573,7 +570,7 @@ head(data)
 
 
 如果下面绘图报错，可以注释掉（暂时删去）某些语句，看看是哪一句有问题  
-比如我的电脑上有family = "serif"这一字体，可能大家的电脑上没有，就会报错
+比如我的电脑上有family = "serif"这一字体，如果在没有对应字体的电脑上运行，就会报错
 
 
 ```R
