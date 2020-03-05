@@ -1,10 +1,9 @@
 ---
 published: true
-title: Python & R函数对照
+title: Python & R数据分析函数对照
 category: Python
 tags: 
   - python
-  - R
 layout: post
 excerpt_separator: <!--more-->
 ---

@@ -1,6 +1,6 @@
 ---
 published: true
-title: Scrapy爬取Blackpink贴吧帖子
+title: Scrapy爬取BLACKPINK贴吧
 category: Web Scraping
 tags: 
   - python
