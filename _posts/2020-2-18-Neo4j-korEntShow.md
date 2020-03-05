@@ -1,11 +1,9 @@
 ---
 published: true
-title: 韩综族谱
+title: Neo4j图数据库建立韩综族谱
 category: Neo4j
 tags: 
   - python
-  - selenium
-  - beautifulsoup
   - neo4j
   - py2neo
 layout: post

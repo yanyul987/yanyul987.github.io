@@ -1,6 +1,6 @@
 ---
 published: true
-title: Python爬虫-以豆瓣电影为例
+title: Selenium+BeautifulSoup爬虫-以豆瓣电影为例
 category: Web Scraping
 tags: 
   - python
