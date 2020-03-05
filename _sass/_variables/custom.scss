@@ -1,0 +1,6 @@
+// altered 2020/3/5
+// ref: http://theme-next.simpleyyt.com/faqs.html#custom-content-width
+// 当屏幕宽度<1600px，默认700px
+$content-desktop : 900px;
+// 当屏幕宽度>1600px，默认900px
+$content-desktop-large: 1200px;
