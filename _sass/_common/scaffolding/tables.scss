@@ -1,5 +1,5 @@
 table {
-  margin: 20px 0;
+  margin: 0 auto;//20px 0;
   //width: $table-width;
   max-width: 100%;
   border-collapse: collapse;
@@ -9,13 +9,20 @@ table {
   table-layout: auto; //fixed;
   word-wrap: break-all;
 }
+table>thead>tr{
+  font-weight: $table-th-font-weight;
+}
 table>tbody>tr {
   &:nth-of-type(odd) { background-color: $table-row-odd-bg-color; }
   &:hover { background-color: $table-row-hover-bg-color; }
 }
 
 caption, th, td {
-  padding: $table-cell-padding;
+  //padding: $table-cell-padding; 
+  padding-left: 15px;
+  padding-right: 15px;
+  padding-bottom: 10px;
+  padding-top: 10px; 
   text-align: $table-content-alignment;
   vertical-align: $table-content-vertical;
   font-weight: normal;
