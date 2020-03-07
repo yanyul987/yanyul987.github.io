@@ -196,11 +196,6 @@ list(dt)
 
     (6, 1)
 
-
-
-
-
-
     ['name']
 
 
@@ -353,71 +348,6 @@ dt3 = df.pivot_table(index="country", values = "name", aggfunc="count").reset_in
 dt2.sort_values("name", ascending=False)
 dt3.sort_values("name", ascending=False)
 ```
-
-
-
-
-<div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
-<table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th>country</th>
-      <th>name</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>1</th>
-      <td>中国大陆</td>
-      <td>143</td>
-    </tr>
-    <tr>
-      <th>5</th>
-      <td>韩国</td>
-      <td>31</td>
-    </tr>
-    <tr>
-      <th>4</th>
-      <td>美国</td>
-      <td>3</td>
-    </tr>
-    <tr>
-      <th>0</th>
-      <td>中国台湾</td>
-      <td>1</td>
-    </tr>
-    <tr>
-      <th>2</th>
-      <td>中国香港</td>
-      <td>1</td>
-    </tr>
-    <tr>
-      <th>3</th>
-      <td>日本</td>
-      <td>1</td>
-    </tr>
-  </tbody>
-</table>
-</div>
-
-
-
-
-
 
 <div>
 <style scoped>

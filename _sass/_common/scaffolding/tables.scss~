@@ -10,7 +10,7 @@ table {
   word-wrap: break-all;
 }
 table>thead>tr{
-
+  font-weight: $table-th-font-weight;
 }
 table>tbody>tr {
   &:nth-of-type(odd) { background-color: $table-row-odd-bg-color; }
