@@ -93,13 +93,7 @@ dfshow.head()
 # dfshow.to_excel("korEntShow2.xlsx")
 ```
 
-<div>
-<style>
-    .dataframe thead tr th {text-align: middle;}
-    .dataframe tbody tr th {width:30px;vertical-align: middle;}
-    .actor {width:110px}
-    .name {width:110px}
-</style>
+<div style="overflow-x:auto;">
 
 <table border="1" class="dataframe">
   <thead>
