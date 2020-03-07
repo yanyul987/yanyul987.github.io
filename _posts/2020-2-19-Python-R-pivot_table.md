@@ -31,7 +31,7 @@ import numpy as np
 df[["name", "country", "director", "year", "actor", "num_actors", "episodes"]].head()
 ```
 
-<div>
+<div style="overflow-x:auto;">
 <style scoped>
     .dataframe tbody tr th:only-of-type {
         vertical-align: middle;

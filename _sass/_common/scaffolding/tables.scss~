@@ -1,5 +1,9 @@
 table {
-  margin: 0 auto;//20px 0;
+  //margin: 20px 0;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  margin-left: auto;
+  margin-right: auto;
   //width: $table-width;
   max-width: 100%;
   border-collapse: collapse;
@@ -29,8 +33,9 @@ caption, th, td {
 }
 
 th, td {
-  border-bottom: 3px solid $table-cell-border-bottom-color;
-  border-right: 1px solid $table-cell-border-right-color;
+  border-top: 3px solid;
+  border-bottom: 3px solid;
+  //border-right: 1px solid $table-cell-border-right-color;
 }
 
 /*th {
