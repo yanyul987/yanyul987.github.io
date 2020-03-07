@@ -124,7 +124,6 @@ df.pivot_table(index="country", values = "name", aggfunc="count")
 
 
 
-
 <div>
 <style scoped>
     .dataframe tbody tr th:only-of-type {
@@ -138,66 +137,6 @@ df.pivot_table(index="country", values = "name", aggfunc="count")
     .dataframe thead th {
         text-align: right;
     }
-</style>
-<table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th>name</th>
-    </tr>
-    <tr>
-      <th>country</th>
-      <th></th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>中国台湾</th>
-      <td>1</td>
-    </tr>
-    <tr>
-      <th>中国大陆</th>
-      <td>143</td>
-    </tr>
-    <tr>
-      <th>中国香港</th>
-      <td>1</td>
-    </tr>
-    <tr>
-      <th>日本</th>
-      <td>1</td>
-    </tr>
-    <tr>
-      <th>美国</th>
-      <td>3</td>
-    </tr>
-    <tr>
-      <th>韩国</th>
-      <td>31</td>
-    </tr>
-  </tbody>
-</table>
-</div>
-
-
-
-
-
-
-<div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-    .td{width:100px;}
 
 </style>
 <table border="1" class="dataframe">
