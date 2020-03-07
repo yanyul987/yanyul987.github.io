@@ -35,6 +35,7 @@ webdriver.Chrome()一句可能会报错：
 (1) 将解压后的chromedriver.exe驱动文件复制到该目录。  
 (2) 并将该目录添加到path中  
 (3) 可能需要将chrome的版本更新到77版  
+(4) 最近才发现，也可能需要把chromedriver.exe驱动文件复制到python的根目录下（可能只有在电脑上装了多个版本的python时需要？）
 
 
 ```python

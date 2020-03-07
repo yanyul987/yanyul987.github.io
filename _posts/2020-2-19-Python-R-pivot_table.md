@@ -24,29 +24,94 @@ excerpt_separator: <!--more-->
 ```python
 import pandas as pd
 import numpy as np
-df = pd.read_excel("D:\Ellalong\mySQLex\korEntShow2.xlsx")
-df = df.drop(columns = ["link", "Unnamed: 0"])
 
-df["num_actors"] = [len(item.split(" / ")) if isinstance(item, str) else None for item in df["actor"]]
-df["episodes"] = [int(item.split("分钟")[0]) if isinstance(item, str) else None for item in df["episodes"]]
-df.head()
+# ...import data... 
+# 省略数据读入部分
+
+df[["name", "country", "director", "year", "actor", "num_actors", "episodes"]].head()
 ```
 
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
 
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
 
-
-    actor       object
-    country     object
-    date        object
-    director    object
-    episodes    object
-    lang        object
-    name        object
-    type        object
-    year         int64
-    dtype: object
-
-
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>name</th>
+      <th>country</th>
+      <th>director</th>
+      <th>year</th>
+      <th>actor</th>
+      <th>num_actors</th>
+      <th>episodes</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>姜食堂 第二季 강식당  시즌2</td>
+      <td>韩国</td>
+      <td>罗英石</td>
+      <td>2019</td>
+      <td>姜虎东 / 李寿根 / 殷志源 / 安宰贤 / 宋旻浩 / 表志勋</td>
+      <td>6.0</td>
+      <td>100.0</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>姜食堂 第三季 강식당 시즌3</td>
+      <td>韩国</td>
+      <td>罗英石</td>
+      <td>2019</td>
+      <td>姜虎东 / 李寿根 / 殷志源 / 安宰贤 / 曹圭贤 / 宋旻浩 / 表志勋</td>
+      <td>7.0</td>
+      <td>100.0</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>非正式会谈 第三季</td>
+      <td>中国大陆</td>
+      <td>NaN</td>
+      <td>2016</td>
+      <td>大左 / 杨迪 / 贝乐泰 / 功必扬 / 华波波 / 浅井悠佑 / 田原皓 / 陈铭 / 陈超</td>
+      <td>9.0</td>
+      <td>80.0</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>妻子的浪漫旅行 第三季</td>
+      <td>中国大陆</td>
+      <td>蔡欢</td>
+      <td>2019</td>
+      <td>谢娜 / 李娜 / 杨千嬅 / 霍思燕 / 唐一菲 / 魏大勋 / 丁子高 / 杜江 / 凌...</td>
+      <td>10.0</td>
+      <td>99.0</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>大逃脱 第二季 대탈출 시즌2</td>
+      <td>韩国</td>
+      <td>郑中渊</td>
+      <td>2019</td>
+      <td>姜虎东 / 金钟民 / 金东炫 / 申东熙 / 柳炳宰 / 表志勋</td>
+      <td>6.0</td>
+      <td>75.0</td>
+    </tr>
+  </tbody>
+</table>
+</div>
 
 
 ```python
