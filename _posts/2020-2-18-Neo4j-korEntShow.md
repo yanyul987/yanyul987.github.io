@@ -93,7 +93,7 @@ dfshow.head()
 # dfshow.to_excel("korEntShow2.xlsx")
 ```
 
-<div style="overflow-x:auto;">
+<div class="table-wrapper">
 
 <table border="1" class="dataframe">
   <thead>
@@ -282,12 +282,6 @@ m2.to_data_frame()
 
 
 <div>
-<style>
-    .dataframe thead tr th {text-align: middle;}
-    .dataframe tbody tr th {vertical-align: middle;}
-    .dataframe tbody tr th{width:30px;}
-    .dataframe tbody tr td{width:300px;}
-</style>
 
 <table border="1" class="dataframe">
   <thead>
@@ -314,12 +308,7 @@ m2.to_data_frame()
 
 
 <div>
-<style>
-    .dataframe thead tr th {text-align: middle;}
-    .dataframe tbody tr th {vertical-align: middle;}
-    .dataframe tbody tr th{width:30px;}
-    .dataframe tbody tr td{width:300px;}
-</style>
+
 <table border="1" class="dataframe">
   <thead>
     <tr>

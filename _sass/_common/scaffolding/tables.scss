@@ -13,9 +13,11 @@ table {
   table-layout: auto; //fixed;
   word-wrap: break-all;
 }
+
 table>thead>tr{
   font-weight: $table-th-font-weight;
 }
+
 table>tbody>tr {
   font-weight: normal;
   &:nth-of-type(odd) { background-color: $table-row-odd-bg-color; }
@@ -37,6 +39,10 @@ th, td {
   border-top: 3px solid $table-cell-border-right-color;
   border-bottom: 3px solid $table-cell-border-right-color;
   border-right: 1px solid $table-cell-border-right-color;
+}
+
+.table-wrapper {
+  overflow-x: auto;
 }
 
 /*th {
