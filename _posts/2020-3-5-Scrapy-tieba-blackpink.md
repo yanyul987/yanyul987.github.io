@@ -270,20 +270,8 @@ class XlsTwistedPipeline(object):
 这里选择了excel文件来进行存储，也可以用数据库等  
 到这里就可以通过Run main来执行爬虫了，爬到的数据如下：
 
-<div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
+<div style="overflow-x:auto;">
 
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
 <table border="1" class="dataframe">
   <thead>
     <tr style="text-align: right;">

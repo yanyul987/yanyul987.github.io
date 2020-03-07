@@ -17,6 +17,7 @@ table>thead>tr{
   font-weight: $table-th-font-weight;
 }
 table>tbody>tr {
+  font-weight: normal;
   &:nth-of-type(odd) { background-color: $table-row-odd-bg-color; }
   &:hover { background-color: $table-row-hover-bg-color; }
 }
@@ -29,7 +30,7 @@ caption, th, td {
   padding-top: 10px; 
   text-align: $table-content-alignment;
   vertical-align: $table-content-vertical;
-  font-weight: normal;
+  //font-weight: normal;
 }
 
 th, td {

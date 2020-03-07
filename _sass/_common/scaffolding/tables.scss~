@@ -24,7 +24,7 @@ table>tbody>tr {
 caption, th, td {
   //padding: $table-cell-padding; 
   padding-left: 15px;
-  padding-right: 15px;
+  padding-right: 25px;
   padding-bottom: 10px;
   padding-top: 10px; 
   text-align: $table-content-alignment;
