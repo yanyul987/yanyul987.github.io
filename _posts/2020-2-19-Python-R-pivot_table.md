@@ -197,6 +197,8 @@ df.pivot_table(index="country", values = "name", aggfunc="count")
     .dataframe thead th {
         text-align: right;
     }
+    .td{width:100px;}
+
 </style>
 <table border="1" class="dataframe">
   <thead>
