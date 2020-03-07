@@ -93,7 +93,7 @@ dfshow.head()
 # dfshow.to_excel("korEntShow2.xlsx")
 ```
 
-<div class="table-wrapper">
+<div class="table-wrapper" markdown="block">
 
 <table border="1" class="dataframe">
   <thead>
