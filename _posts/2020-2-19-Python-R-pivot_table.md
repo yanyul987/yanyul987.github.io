@@ -10,9 +10,7 @@ excerpt_separator: <!--more-->
 
 记录Python和R中一些功能接近的函数
 
-习惯了用R来处理数据和画图，一直以来对Python基本只用爬虫相关功能df.to_excel(), pd.read_excel()  
-想用Python处理数据的时候总是在寻找R中的table(),tapply()等函数的替代品  
-记录一下艰辛（并不）的寻找历程
+习惯了用R来处理数据和画图，最近开始用Python做数据分析，总是在寻找R中的table(),tapply()等函数的替代品。因此记录一下Python和R数据分析方面功能接近的函数。
 
 <!--more-->
 
