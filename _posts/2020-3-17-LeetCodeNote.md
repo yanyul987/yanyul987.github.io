@@ -7,7 +7,6 @@ tags:
 layout: post
 excerpt_separator: <!--more-->
 ---
-# Leetcode 刷题笔记
 ![jpg](/assets/images/20200317leetcode/leetcode-cover.jpg)
 
 ## 34.Find First and Last Position of Element in Sorted Array  
