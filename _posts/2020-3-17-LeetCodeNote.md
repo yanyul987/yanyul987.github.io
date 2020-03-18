@@ -226,13 +226,64 @@ node2list(node_res)
 
     [7, 0, 8]
 
-
-
     [0, 1]
 
-
-
     [0, 5, 4]
+
+## 3. Longest Substring Without Repeating Characters  
+2020/3/18
+
+
+```python
+# For LeetCode
+class Solution:
+    def lengthOfLongestSubstring(self, s: str) -> int:
+        max_len = 0
+        cur_len = 0
+        chardict = {}
+        for i, char in enumerate(s):
+            if char in chardict:
+                if i - chardict[char] <= cur_len:
+                    cur_len = i - chardict[char] - 1
+            cur_len += 1
+            chardict[char] = i
+            max_len = max(max_len, cur_len)
+        return(max_len)
+```
+
+
+```python
+# For my PC
+class Solution:
+    # def lengthOfLongestSubstring(self, s: str) -> int:
+    def lengthOfLongestSubstring(self, s):
+        max_len = 0
+        cur_len = 0
+        chardict = {}
+        for i, char in enumerate(s):
+            if char in chardict:
+                if i - chardict[char] <= cur_len:
+                    cur_len = i - chardict[char] - 1
+            cur_len += 1
+            chardict[char] = i
+            max_len = max(max_len, cur_len)
+        return(max_len)
+    
+    
+mysol = Solution()
+mysol.lengthOfLongestSubstring("aab") # 2
+mysol.lengthOfLongestSubstring("abcabcbb") # 3
+mysol.lengthOfLongestSubstring("bbbbb") # 1
+mysol.lengthOfLongestSubstring("pwwkew") # 3
+```
+
+    2
+
+    3
+
+    1
+
+    3
 
 
 ## to be continued
