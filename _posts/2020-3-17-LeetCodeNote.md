@@ -292,4 +292,71 @@ mysol.findMedianSortedArrays([3,4], [1,2]) # 2.5
     2.5
 
 
+## 5. Longest Palindromic Substring  
+2020/3/19  
+执行用时 :2268 ms, 在所有 Python3 提交中击败了54.75%的用户  
+内存消耗 :13.5 MB, 在所有 Python3 提交中击败了31.36%的用户  
+比较暴力的解法，有空再深入研究
+
+```python
+class Solution:
+    # def longestPalindrome(self, s: str) -> str:
+    def longestPalindrome(self, s):
+        def localString(idx, s, type): # 找s[idx]处的局部最优解
+            len_s = len(s)
+            idx_left = idx-1
+            idx_right = idx if type=="even" else idx+1
+            if idx_left>=0 and idx_right<=len_s-1:
+                cur_str = "" if type=="even" else s[idx]
+                while s[idx_left] == s[idx_right]:
+                    cur_str = s[idx_left]+cur_str+s[idx_right]
+                    if idx_left == 0 or idx_right == len_s-1:
+                        break
+                    idx_left -= 1
+                    idx_right += 1
+            else:
+                cur_str = ""
+            return(cur_str)
+
+        len_s = len(s)
+        if len_s == 0:
+            return(s)
+        # 初始化
+        max_len = 1
+        max_string = s[0]
+
+        for idx, char in enumerate(s):
+            # 以s[idx]为中心，长度为奇数的回文数
+            cur_str = localString(idx, s, "odd")
+            cur_len = len(cur_str)
+            if cur_len > max_len:
+                max_len = cur_len
+                max_string = cur_str
+
+            # 以s[idx-1], s[idx]为中心，长度为偶数的回文数
+            cur_str = localString(idx, s, "even")
+            cur_len = len(cur_str)
+            if cur_len > max_len:
+                max_len = cur_len
+                max_string = cur_str
+
+        return(max_string)
+
+
+mysol = Solution()
+mysol.longestPalindrome("a") # "a"
+mysol.longestPalindrome("bb") # bb
+mysol.longestPalindrome("babad") # "bab"
+mysol.longestPalindrome("cbbd") # "bb"
+```
+
+    'a'
+
+    'bb'
+
+    'bab'
+
+    'bb'
+
+
 ## to be continued
