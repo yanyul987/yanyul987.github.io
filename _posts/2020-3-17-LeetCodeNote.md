@@ -8,53 +8,13 @@ layout: post
 excerpt_separator: <!--more-->
 ---
 ![jpg](/assets/images/20200317leetcode/leetcode-cover.jpg)
+Last update: 2020/3/19  
+<!--more-->
 
 ## 34.Find First and Last Position of Element in Sorted Array  
 2020/3/17
-<!--more-->
-
 
 ```python
-# For LeetCode
-class Solution:
-    def searchRange(self, nums: List[int], target: int) -> List[int]:
-
-        def find_left(nums: List[int], target:int) -> int:
-            start = 0
-            end = len(nums) - 1
-            res = -1
-            while start<=end:
-                mid = start+int((end-start)/2)
-                if nums[mid] < target:
-                    start = mid + 1
-                elif nums[mid] > target:
-                    end = mid - 1
-                else: # nums[mid] == target
-                    res = mid
-                    end = mid - 1
-            return(res)
-
-        def find_right(nums: list[int], target:int) -> int:
-            start = 0
-            end = len(nums) - 1
-            res = -1
-            while start<=end:
-                mid = start+int((end-start)/2)
-                if nums[mid] < target:
-                    start = mid + 1
-                elif nums[mid] > target:
-                    end = mid - 1
-                else:
-                    res = mid
-                    start = mid + 1
-            return(res)
-
-        return([find_left(nums, target), find_right(nums, target)])            
-```
-
-
-```python
-# For my PC
 class Solution:
     # def searchRange(self, nums: List[int], target: int) -> List[int]:
     def searchRange(self, nums, target):
@@ -233,27 +193,7 @@ node2list(node_res)
 ## 3. Longest Substring Without Repeating Characters  
 2020/3/18
 
-
 ```python
-# For LeetCode
-class Solution:
-    def lengthOfLongestSubstring(self, s: str) -> int:
-        max_len = 0
-        cur_len = 0
-        chardict = {}
-        for i, char in enumerate(s):
-            if char in chardict:
-                if i - chardict[char] <= cur_len:
-                    cur_len = i - chardict[char] - 1
-            cur_len += 1
-            chardict[char] = i
-            max_len = max(max_len, cur_len)
-        return(max_len)
-```
-
-
-```python
-# For my PC
 class Solution:
     # def lengthOfLongestSubstring(self, s: str) -> int:
     def lengthOfLongestSubstring(self, s):
@@ -284,6 +224,72 @@ mysol.lengthOfLongestSubstring("pwwkew") # 3
     1
 
     3
+
+
+## 4. Median of Two Sorted Arrays  
+2020/3/19
+
+
+```python
+class Solution:
+    # def findMedianSortedArrays(self, nums1: List[int], nums2: List[int]) -> float:
+    def findMedianSortedArrays(self, nums1, nums2):
+        
+        len_t = len(nums1) + len(nums2)
+        even = True if len_t % 2 == 0 else False
+        idx_tar = len_t // 2
+        idx_nums = -1
+        if nums2:
+            j = nums2[0]
+        
+        for i in nums1:
+            if nums2:
+                while j <= i:
+                    idx_nums += 1
+                    if idx_nums == idx_tar:
+                        val_2 = j
+                        break
+                    elif even & (idx_nums == idx_tar - 1):
+                        val_1 = j
+                    nums2.pop(0)
+                    if len(nums2) == 0:
+                        break
+                    j = nums2[0]
+            idx_nums += 1
+            if idx_nums == idx_tar:
+                val_2 = i
+            elif even & (idx_nums == idx_tar - 1):
+                val_1 = i
+            if idx_nums >= idx_tar:
+                break
+        
+        if nums2:
+            for j in nums2:
+                idx_nums += 1
+                if idx_nums == idx_tar:
+                    val_2 = j
+                elif even & (idx_nums == idx_tar - 1):
+                    val_1 = j
+                if idx_nums >= idx_tar:
+                    break
+
+        if even:
+            return((val_1 + val_2)/2)
+        else:
+            return(val_2)
+        
+        
+mysol = Solution()
+mysol.findMedianSortedArrays([1,2], [3,4]) # 2.5
+mysol.findMedianSortedArrays([1,3], [2]) # 2
+mysol.findMedianSortedArrays([3,4], [1,2]) # 2.5
+```
+
+    2.5
+
+    2
+
+    2.5
 
 
 ## to be continued
