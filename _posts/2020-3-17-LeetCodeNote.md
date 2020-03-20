@@ -8,7 +8,7 @@ layout: post
 excerpt_separator: <!--more-->
 ---
 ![jpg](/assets/images/20200317leetcode/leetcode-cover.jpg)
-Last update: 2020/3/19  
+Last update: 2020/3/20  
 <!--more-->
 
 ## 34.Find First and Last Position of Element in Sorted Array  
@@ -357,6 +357,103 @@ mysol.longestPalindrome("cbbd") # "bb"
     'bab'
 
     'bb'
+
+
+## 6. ZigZag Conversion  
+2020/3/20
+
+
+```python
+class Solution:
+    # def convert(self, s: str, numRows: int) -> str:
+    def convert(self, s, numRows):
+        if numRows==1:
+            return(s)
+            
+        res = []
+        len_s = len(s)
+        step = 2*numRows-2
+
+        # i_row = 1
+        idx = 0 # i_row-1
+        while idx<len_s:
+            res.append(s[idx])
+            idx += step
+
+        # 1<i_row<numRows
+        for i_row in range(2, numRows):
+            idx = i_row-1
+            idx2 = 2*numRows-i_row-1
+            while idx2<len_s:
+                res.append(s[idx])
+                res.append(s[idx2])
+                idx += step
+                idx2 += step
+            if idx<len_s:
+                res.append(s[idx])
+
+        # i_row = numRows
+        idx = numRows-1 # i_row-1
+        while idx<len_s:
+            res.append(s[idx])
+            idx += step
+
+        return("".join(res))
+    
+
+mysol = Solution()
+mysol.convert("PAYPALISHIRING", 1) # "PAYPALISHIRING"
+mysol.convert("PAYPALISHIRING", 3) # "PAHNAPLSIIGYIR"
+mysol.convert("PAYPALISHIRING", 4) # "PINALSIGYAHRPI"
+```
+
+    'PAYPALISHIRING'
+
+    'PAHNAPLSIIGYIR'
+
+    'PINALSIGYAHRPI'
+
+
+## 7. Reverse Integer  
+2020/3/20
+
+
+```python
+class Solution:
+    # def reverse(self, x: int) -> int:
+    def reverse(self, x):
+        if (x>2**31-1) or (x<-2**31):
+            return(0)
+
+        sign = (x<0)
+        x = abs(x)
+        res = 0
+
+        while x:
+            res = res*10 + x%10
+            x = x//10
+
+        res = -res if sign else res
+        if (res>2**31-1) or (res<-2**31):
+            return(0)
+        else:
+            return(res)
+        
+
+mysol=Solution()
+mysol.reverse(123) # 321
+mysol.reverse(-123) # -321
+mysol.reverse(120) # 21
+mysol.reverse(1534236469) # 0
+```
+
+    321
+
+    -321
+
+    21
+
+    0
 
 
 ## to be continued
