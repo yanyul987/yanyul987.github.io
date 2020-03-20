@@ -456,4 +456,64 @@ mysol.reverse(1534236469) # 0
     0
 
 
+## 8. String to Integer (atoi)  
+2020/3/20
+
+
+```python
+class Solution:
+    # def myAtoi(self, str: str) -> int:
+    def myAtoi(self, str):
+        if str == "":
+            return(0)
+        INT_MAX = 2**31 - 1
+        INT_MIN = -2**31
+        
+        idx = 0
+        len_str = len(str)
+        while str[idx] == " ":
+            idx += 1
+            if idx > len_str - 1:
+                return(0)
+
+        sign = "-" if str[idx] == "-" else "+"
+        if str[idx] in ["+", "-"]:
+            idx += 1
+
+        res = 0
+        for char in str[idx:]:
+            ord_char = ord(char)
+            if ord_char not in range(48, 58): # 包括+-号
+                break
+            else: # [0-9]:
+                res = res*10 + ord_char - 48
+
+        if sign == "-":
+            res = -res
+            res = max(res, INT_MIN)
+        else:
+            res = min(res, INT_MAX)
+        
+        return(res)
+
+            
+mysol = Solution()
+mysol.myAtoi("") # 0
+mysol.myAtoi("   ") # 0 
+mysol.myAtoi("words and 987") # 0
+mysol.myAtoi("-91283472332") # -2147483648
+mysol.myAtoi("   -42") # -42
+```
+
+    0
+
+    0
+
+    0
+
+    -2147483648
+
+    -42
+
+
 ## to be continued
