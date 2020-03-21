@@ -8,7 +8,7 @@ layout: post
 excerpt_separator: <!--more-->
 ---
 ![jpg](/assets/images/20200317leetcode/leetcode-cover.jpg)
-Last update: 2020/3/20  
+Last update: 2020/3/21  
 <!--more-->
 
 ## 34.Find First and Last Position of Element in Sorted Array  
@@ -514,6 +514,116 @@ mysol.myAtoi("   -42") # -42
     -2147483648
 
     -42
+
+
+## 9. Palindrome Number  
+2020/3/21
+
+
+```python
+class Solution:
+    # def isPalindrome(self, x: int) -> bool:
+    def isPalindrome_a(self, x):
+        if x<0:
+            return(False)
+        if x == int(str(x)[::-1]):
+            return(True)
+        else:
+            return(False)
+        
+        
+    def isPalindrome_b(self, x):
+        if x<0:
+            return(False)
+        x0 = x
+        res = 0
+        while x:
+            res = res * 10 + x % 10
+            x = x // 10
+        return(res == x0)
+
+
+mysol = Solution()
+mysol.isPalindrome_a(0)# ; mysol.isPalindrome_b(0) # True
+mysol.isPalindrome_a(121)# ; mysol.isPalindrome_b(121) # True
+mysol.isPalindrome_a(-121)# ; mysol.isPalindrome_b(-121) # False
+mysol.isPalindrome_a(10)# ; mysol.isPalindrome_b(10) # False
+```
+
+    True
+
+    True
+
+    False
+
+    False
+
+
+
+## 10. Regular Expression Matching  
+2020/3/21
+
+
+```python
+class Solution:
+    # def isMatch(self, s: str, p: str) -> bool:
+    def isMatch(self, s, p):
+        if p == "":
+            return(s=="")
+
+        if len(p) == 1:
+            if len(s) != 1:
+                return(False)
+            else:
+                if p[0] == ".":
+                    return(True)
+                else:
+                    return(s[0] == p[0])
+
+        if p[1] != "*":
+            if len(s)==0:
+                return(False)
+            if p[0] != "." and s[0] != p[0]:
+                return(False)
+            else:
+                return(self.isMatch(s[1:], p[1:]))
+        else:
+            idx = 0
+            len_s = len(s)
+            if len_s == 0:
+                return(self.isMatch(s, p[2:]))
+            while idx<=len_s-1:
+                if p[0] != "." and s[idx] != p[0]:
+                    return(self.isMatch(s[idx:], p[2:]))
+                if self.isMatch(s[idx:], p[2:]):
+                    return(True)
+                idx += 1
+            return(self.isMatch("", p[2:]))
+            """
+            idx = 0时，isMatch(s[idx:], p[2:])是将p[0:1]即p[0]*对应了s中的""
+            idx = 1时，将p[0]*对应了s[0](前提是s[0]与p[0]匹配)
+            idx = 2时，将p[0]*对应了s[0:1](前提是s[0]、s[1]均与p[0]匹配)
+            ......
+            """
+
+mysol = Solution()
+mysol.isMatch("aa", "a") # False
+mysol.isMatch("aa", "a*") # True
+mysol.isMatch("ab", ".*") # True
+mysol.isMatch("aab", "c*a*b") # True
+mysol.isMatch("mississippi", "mis*is*p*.") # False
+```
+
+
+    False
+
+    True
+
+    True
+
+    True
+
+    False
 
 
 ## to be continued
