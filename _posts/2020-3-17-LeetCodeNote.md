@@ -676,7 +676,7 @@ class Solution:
                     if n<4:
                         return(self.intToRoman(num%inum, idx+1, ini+self.rom_list[idx]*n))
                     else: # 4000, 400, 40, 4
-                        return(self.intToRoman(num%(n*inum), idx+1, ini+self.rom_list[idx]+self.rom_list[idx-1]))
+                        return(self.intToRoman(num%inum, idx+1, ini+self.rom_list[idx]+self.rom_list[idx-1]))
                 else: # 500, 50, 5
                     if num < 9*self.num_list[idx+1]:
                         return(self.intToRoman(num%inum, idx+1, ini+self.rom_list[idx]))
