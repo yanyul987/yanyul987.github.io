@@ -8,7 +8,7 @@ layout: post
 excerpt_separator: <!--more-->
 ---
 ![jpg](/assets/images/20200317leetcode/leetcode-cover.jpg)
-Last update: 2020/3/21  
+Last update: 2020/3/22  
 <!--more-->
 
 ## 34.Find First and Last Position of Element in Sorted Array  
@@ -624,6 +624,86 @@ mysol.isMatch("mississippi", "mis*is*p*.") # False
     True
 
     False
+
+## 11. Container With Most Water  
+2020/3/22
+
+```python
+class Solution:
+    # def maxArea(self, height: List[int]) -> int:
+    def maxArea(self, height):
+        num_container = len(height)
+        max_idx1 = height.index(max(height))
+        max_idx2 = num_container-1-height[::-1].index(max(height))
+        max_area = 0
+        max_height_i = 0
+        for i in range(0, max_idx1+1):
+            if height[i] <= max_height_i:
+                continue
+            max_height_i = height[i]
+            max_height_j = 0
+            for j in range(num_container-1, max_idx2-1, -1):
+                if height[j]<=max_height_j:
+                    continue
+                max_height_j = height[j]
+                area_ij = (j-i)*min(height[i], height[j])
+                max_area = max(max_area, area_ij)
+        return(max_area)
+    
+mysol = Solution()
+mysol.maxArea([1,8,6,2,5,4,8,3,7]) # 49
+```
+
+    49
+
+
+## 12. Integer to Roman  
+2020/3/22
+
+
+```python
+class Solution:
+    num_list = [1000, 500, 100, 50, 10, 5, 1]
+    rom_list = list("MDCLXVI")
+    def intToRoman(self, num, idx=0, ini=""):
+        if num==0:
+            return(ini)
+        while idx <= 6:
+            inum = self.num_list[idx]
+            if num>=inum:
+                if idx%2 == 0: # 1000, 100, 10, 1
+                    n = num//inum
+                    if n<4:
+                        return(self.intToRoman(num%inum, idx+1, ini+self.rom_list[idx]*n))
+                    else: # 4000, 400, 40, 4
+                        return(self.intToRoman(num%(n*inum), idx+1, ini+self.rom_list[idx]+self.rom_list[idx-1]))
+                else: # 500, 50, 5
+                    if num < 9*self.num_list[idx+1]:
+                        return(self.intToRoman(num%inum, idx+1, ini+self.rom_list[idx]))
+                    else: # 900, 90, 9
+                        return(self.intToRoman(num%self.num_list[idx+1], idx+1, ini+self.rom_list[idx+1]+self.rom_list[idx-1]))
+            idx += 1
+            
+mysol = Solution()
+mysol.intToRoman(3) # "III"
+mysol.intToRoman(4) # "IV"
+mysol.intToRoman(9) # "IX"
+mysol.intToRoman(58) # "LVIII"
+mysol.intToRoman(1994) # "MCMXCIV"
+mysol.intToRoman(3999) # "MMMCMXCIX"
+```
+
+    'III'
+
+    'IV'
+
+    'IX'
+
+    'LVIII'
+
+    'MCMXCIV'
+
+    'MMMCMXCIX'
 
 
 ## to be continued
