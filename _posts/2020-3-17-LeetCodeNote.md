@@ -681,7 +681,7 @@ class Solution:
                     if num < 9*self.num_list[idx+1]:
                         return(self.intToRoman(num%inum, idx+1, ini+self.rom_list[idx]))
                     else: # 900, 90, 9
-                        return(self.intToRoman(num%self.num_list[idx+1], idx+1, ini+self.rom_list[idx+1]+self.rom_list[idx-1]))
+                        return(self.intToRoman(num%self.num_list[idx+1], idx+2, ini+self.rom_list[idx+1]+self.rom_list[idx-1]))
             idx += 1
             
 mysol = Solution()
