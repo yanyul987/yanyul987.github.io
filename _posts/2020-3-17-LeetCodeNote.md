@@ -841,4 +841,46 @@ mysol.threeSum([-1,0,1,2,-1,-4]) # [[-1,-1,2],[-1,0,1]]
 
     [[-1, -1, 2], [-1, 0, 1]]
 
+
+## 26. Remove Duplicates from Sorted Array  
+2020/3/23  
+执行用时 :48 ms, 在所有 Python3 提交中击败了89.80%的用户
+
+
+```python
+class Solution:
+    # def removeDuplicates(self, nums: List[int]) -> int:
+    def removeDuplicates(self, nums):
+        len_nums = len(nums)
+        if len_nums == 1:
+            return(1)
+
+        count = 0
+        idx = 0
+        
+        while idx < len_nums:
+            if count < idx:
+                nums[count] = nums[idx]
+            count += 1
+            while idx < len_nums - 1: # 跳过重复值
+                if nums[idx] == nums[idx+1]:
+                    idx += 1
+                else:
+                    break
+            idx += 1
+        print(nums[:count])
+        return(count)
+    
+mysol = Solution()
+mysol.removeDuplicates([1,1,2]) # count = 2, nums[:count] = [1,2]
+mysol.removeDuplicates([0,0,1,1,1,2,2,3,3,4]) # count = 5, nums[:count] = [0, 1, 2, 3, 4]
+```
+
+    [1, 2]
+    2
+
+
+    [0, 1, 2, 3, 4]
+    5
+
 ## to be continued
