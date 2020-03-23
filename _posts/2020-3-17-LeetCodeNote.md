@@ -8,7 +8,7 @@ layout: post
 excerpt_separator: <!--more-->
 ---
 ![jpg](/assets/images/20200317leetcode/leetcode-cover.jpg)
-Last update: 2020/3/22  
+Last update: 2020/3/23  
 <!--more-->
 
 ## 34.Find First and Last Position of Element in Sorted Array  
@@ -705,5 +705,140 @@ mysol.intToRoman(3999) # "MMMCMXCIX"
 
     'MMMCMXCIX'
 
+
+
+## 13. Roman to Integer  
+2020/3/23
+
+
+```python
+class Solution:
+    rom_int = {"I": 1, "V": 5, "X": 10, "L": 50, "C": 100, "D": 500, "M": 1000}
+    # def romanToInt(self, s: str) -> int:
+    def romanToInt(self, s):
+        res = 0
+        last = 1000
+        idx = 0
+        while idx < len(s):
+            if self.rom_int[s[idx]] <= last:
+                last = self.rom_int[s[idx]]
+                res += last
+            else:
+                res += (self.rom_int[s[idx]]-last-last) # 前面多加了一次last也要减掉
+                last = self.rom_int[s[idx]]
+            idx += 1
+        return(res)
+    
+mysol = Solution()
+mysol.romanToInt("III") # 3
+mysol.romanToInt("IV") # 4
+mysol.romanToInt("IX") # 9
+mysol.romanToInt("LVIII") # 58
+mysol.romanToInt("MCMXCIV") # 1994
+mysol.romanToInt("MMMCMXCIX") # 3999
+```
+
+    3
+
+    4
+
+    9
+
+    58
+
+    1994
+
+    3999
+
+
+
+## 14. Longest Common Prefix  
+2020/3/23
+
+
+```python
+class Solution:
+    # def longestCommonPrefix(self, strs: List[str]) -> str:
+    def longestCommonPrefix(self, strs):
+        if len(strs) == 0:
+            return("")
+        
+        prefix = strs[0]
+        for str_i in strs[1:]:
+            len_i = min(len(prefix), len(str_i))
+            prefix = prefix[:len_i]
+            if prefix == "":
+                break
+            for idx in range(0, len_i):
+                if str_i[idx] != prefix[idx]:
+                    prefix = prefix[:idx]
+                    break
+
+        return(prefix)
+    
+mysol = Solution()
+mysol.longestCommonPrefix(["aa", "a"]) # "a"
+mysol.longestCommonPrefix(["flower","flow","flight"]) # "fl"
+```
+
+    'a'
+
+    'fl'
+
+
+## 15. 3Sum  
+2020/3/23
+
+
+```python
+class Solution:
+    def toRight(self, nums, idx, rightBoundry):
+        while idx < rightBoundry: # 跳过nums[idx]右边所有值与nums[idx]相同的元素，若无等值元素则idx不变
+            if nums[idx] == nums[idx+1]:
+                idx += 1
+            else:
+                break
+        return(idx+1)
+
+    def toLeft(self, nums, idx, leftBoundry):
+        while idx > leftBoundry: # 跳过nums[idx]左边所有值与nums[idx]相同的元素，若无等值元素则idx不变
+            if nums[idx] == nums[idx-1]:
+                idx -= 1
+            else:
+                break
+        return(idx-1)
+
+    # def threeSum(self, nums: List[int]) -> List[List[int]]:
+    def threeSum(self, nums):
+        len_nums = len(nums)
+        if len_nums<3:
+            return([])
+        nums.sort()
+        ans = []
+        idx1 = 0
+        while idx1 < len_nums-2:
+            left = nums[idx1]
+            if left > 0:
+                break
+            idx2, idx3 = idx1+1, len_nums-1
+            while idx2 < idx3:
+                mid, right = nums[idx2], nums[idx3]
+                if left+mid+right==0:
+                    ans.append([left, mid, right])
+                    idx2 = self.toRight(nums, idx2, idx3)
+                    idx3 = self.toLeft(nums, idx3, idx2)
+                elif left+mid+right<0:
+                    idx2 = self.toRight(nums, idx2, idx3)
+                else:
+                    idx3 = self.toLeft(nums, idx3, idx2)
+            idx1 = self.toRight(nums, idx1, len_nums-1)
+
+        return(ans)
+    
+mysol = Solution()
+mysol.threeSum([-1,0,1,2,-1,-4]) # [[-1,-1,2],[-1,0,1]]
+```
+
+    [[-1, -1, 2], [-1, 0, 1]]
 
 ## to be continued
