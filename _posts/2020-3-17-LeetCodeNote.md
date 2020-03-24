@@ -883,4 +883,181 @@ mysol.removeDuplicates([0,0,1,1,1,2,2,3,3,4]) # count = 5, nums[:count] = [0, 1,
     [0, 1, 2, 3, 4]
     5
 
+
+## 16. 3Sum Closest  
+2020/3/24  
+执行用时:100 ms, 在所有 Python3 提交中击败了89.36%的用户
+
+
+```python
+class Solution:
+    def toRight(self, nums, idx, boundry):
+        while idx < boundry:
+            if nums[idx] == nums[idx+1]:
+                idx += 1
+            else: 
+                break
+        return(idx+1)
+    
+    def toLeft(self, nums, idx, boundry):
+        while idx > boundry:
+            if nums[idx] == nums[idx-1]:
+                idx -= 1
+            else:
+                break
+        return(idx-1)
+    
+    # def threeSumClosest(self, nums: List[int], target: int) -> int:
+    def threeSumClosest(self, nums, target):
+        nums.sort()
+        len_nums = len(nums)
+        idx = 0
+        diff_closest = None
+        while idx < len_nums-2:
+            left = nums[idx]
+            idx_mid, idx_right = idx+1, len_nums-1
+            while idx_mid < idx_right:
+                mid, right = nums[idx_mid], nums[idx_right]
+                diff = left+mid+right-target
+                if (diff_closest is None) or (abs(diff) < diff_closest):
+                    diff_closest = abs(diff)
+                    sum_closest = left+mid+right
+                if diff==0:
+                    return(target)
+                elif diff<0:
+                    idx_mid = self.toRight(nums, idx_mid, idx_right)
+                else:
+                    idx_right = self.toLeft(nums, idx_right, idx_mid)
+            idx = self.toRight(nums, idx, len_nums-1)
+
+        return(sum_closest)
+    
+
+mysol = Solution()
+mysol.threeSumClosest([1, 1, 1, 1], 0) # 3
+mysol.threeSumClosest([-1, 2, 1, -4], 1) # 2
+```
+
+    3
+
+    2
+
+
+## 17. Letter Combinations of a Phone Number  
+2020/3/24    
+执行用时:24 ms, 在所有 Python3 提交中击败了98.39%的用户
+
+
+```python
+class Solution:    
+    # def letterCombinations(self, digits: str) -> List[str]:
+    def letterCombinations(self, digits):
+        num2char = {"2": "abc", "3":"def", "4":"ghi",
+                    "5": "jkl", "6":"mno", "7":"pqrs",
+                    "8": "tuv", "9": "wxyz"}
+        if len(digits) == 0:
+            return([])
+        res = [""]
+        for num in digits:
+            res = [i+j for i in res for j in num2char[num]]
+        return(res)
+    
+    """
+    num2char = {"2": "abc", "3":"def", "4":"ghi",
+                "5": "jkl", "6":"mno", "7":"pqrs",
+                "8": "tuv", "9": "wxyz"}
+    def letterCombinations(self, digits, str_done=[]):
+        if len(digits) == 0:
+            return(str_done)
+        cur_str = list(self.num2char[digits[-1]])
+        if str_done == []:
+            return(self.letterCombinations(digits[:-1], cur_str))
+        res = []
+        for char in cur_str:
+            res += [char+item for item in str_done]
+        return(self.letterCombinations(digits[:-1], res))
+    """
+    
+    
+mysol = Solution()
+mysol.letterCombinations("") # []
+mysol.letterCombinations("23") # ["ad", "ae", "af", "bd", "be", "bf", "cd", "ce", "cf"]
+mysol.letterCombinations("72") # ["pa","pb","pc","qa","qb","qc","ra","rb","rc","sa","sb","sc"]
+```
+
+
+    []
+
+    ['ad', 'ae', 'af', 'bd', 'be', 'bf', 'cd', 'ce', 'cf']
+
+    ['pa', 'pb', 'pc', 'qa', 'qb', 'qc', 'ra', 'rb', 'rc', 'sa', 'sb', 'sc']
+
+
+## 18. 4Sum  
+2020/3/24  
+
+
+```python
+class Solution:
+    
+    def toRight(self, nums, idx, boundry):
+        while idx < boundry:
+            if nums[idx] == nums[idx+1]:
+                idx+=1
+            else:
+                break
+        return(idx+1)
+
+    def toLeft(self, nums, idx, boundry):
+        while idx > boundry:
+            if nums[idx] == nums[idx-1]:
+                idx-=1
+            else:
+                break
+        return(idx-1)
+
+    # def fourSum(self, nums: List[int], target: int) -> List[List[int]]:
+    def fourSum(self, nums, target):
+        nums.sort()
+        len_nums = len(nums)
+
+        idx1 = 0
+        res = []
+        while idx1 < len_nums - 3:
+            num1 = nums[idx1]
+            if num1 > target/4:
+                break
+            # idx2 = self.toRight(nums, idx1, len_nums - 2)
+            idx2 = idx1 + 1
+            while idx2 < len_nums - 2:
+                num2 = nums[idx2]
+                if (num1+num2) > target/2:
+                    break
+                idx3 = idx2 + 1
+                idx4 = len_nums - 1
+                while idx3 < idx4:
+                    num3, num4 = nums[idx3], nums[idx4]
+                    sum_temp = num1 + num2 + num3 + num4
+                    if sum_temp == target:
+                        res.append([num1, num2, num3, num4])
+                        idx3 = self.toRight(nums, idx3, idx4)
+                        idx4 = self.toLeft(nums, idx4, idx3)
+                    elif sum_temp < target:
+                        idx3 = self.toRight(nums, idx3, idx4)
+                    else:
+                        idx4 = self.toLeft(nums, idx4, idx3)
+                idx2 = self.toRight(nums, idx2, len_nums - 2)
+            idx1 = self.toRight(nums, idx1, len_nums - 3)
+        return(res)
+
+
+mysol = Solution()
+mysol.fourSum([0, 0, 0, 0], 0) # [[0,0,0,0]]
+mysol.fourSum([1, 0, -1, 0, -2, 2], 0) # [[-2,-1,1,2],[-2,0,0,2],[-1,0,0,1]]
+```
+
+    [[0, 0, 0, 0]]
+
+    [[-2, -1, 1, 2], [-2, 0, 0, 2], [-1, 0, 0, 1]]
+
 ## to be continued
