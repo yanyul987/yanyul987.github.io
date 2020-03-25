@@ -8,6 +8,10 @@ layout: post
 excerpt_separator: <!--more-->
 ---
 ![jpg](/assets/images/20200317leetcode/leetcode-cover.jpg)
+
+Last update: 2020/3/25  
+<!--more-->
+
 >ListNode系列：\#2 \#19 \#21  
 
 ```python
@@ -39,8 +43,6 @@ class ListNode:
         return(res)
 ```
 
-Last update: 2020/3/25  
-<!--more-->
 
 ## 34.Find First and Last Position of Element in Sorted Array  
 2020/3/17
@@ -140,11 +142,9 @@ class Solution:
 
 ```python
 # For my PC
-      
 
 class Solution:
-    # def addTwoNumbers(self, l1: ListNode, l2: ListNode) -> ListNode:
-    def addTwoNumbers(self, l1, l2):
+    def addTwoNumbers(self, l1: ListNode, l2: ListNode) -> ListNode:
         r = []
         while l1:
             if l2:
@@ -179,7 +179,6 @@ mysol = Solution()
 node = ListNode.list2node # class ListNode见本文最上方
 node2list = ListNode.node2list
 
-
 node_res = mysol.addTwoNumbers(node([2,4,3]), node([5,6,4]))
 node2list(node_res)
 
@@ -202,8 +201,7 @@ node2list(node_res)
 
 ```python
 class Solution:
-    # def lengthOfLongestSubstring(self, s: str) -> int:
-    def lengthOfLongestSubstring(self, s):
+    def lengthOfLongestSubstring(self, s: str) -> int:
         max_len = 0
         cur_len = 0
         chardict = {}
@@ -307,8 +305,7 @@ mysol.findMedianSortedArrays([3,4], [1,2]) # 2.5
 
 ```python
 class Solution:
-    # def longestPalindrome(self, s: str) -> str:
-    def longestPalindrome(self, s):
+    def longestPalindrome(self, s: str) -> str:
         def localString(idx, s, type): # 找s[idx]处的局部最优解
             len_s = len(s)
             idx_left = idx-1
@@ -372,8 +369,7 @@ mysol.longestPalindrome("cbbd") # "bb"
 
 ```python
 class Solution:
-    # def convert(self, s: str, numRows: int) -> str:
-    def convert(self, s, numRows):
+    def convert(self, s: str, numRows: int) -> str:
         if numRows==1:
             return(s)
             
@@ -427,8 +423,7 @@ mysol.convert("PAYPALISHIRING", 4) # "PINALSIGYAHRPI"
 
 ```python
 class Solution:
-    # def reverse(self, x: int) -> int:
-    def reverse(self, x):
+    def reverse(self, x: int) -> int:
         if (x>2**31-1) or (x<-2**31):
             return(0)
 
@@ -469,8 +464,7 @@ mysol.reverse(1534236469) # 0
 
 ```python
 class Solution:
-    # def myAtoi(self, str: str) -> int:
-    def myAtoi(self, str):
+    def myAtoi(self, str: str) -> int:
         if str == "":
             return(0)
         INT_MAX = 2**31 - 1
@@ -573,8 +567,7 @@ mysol.isPalindrome_a(10)# ; mysol.isPalindrome_b(10) # False
 
 ```python
 class Solution:
-    # def isMatch(self, s: str, p: str) -> bool:
-    def isMatch(self, s, p):
+    def isMatch(self, s: str, p: str) -> bool:
         if p == "":
             return(s=="")
 
@@ -721,8 +714,7 @@ mysol.intToRoman(3999) # "MMMCMXCIX"
 ```python
 class Solution:
     rom_int = {"I": 1, "V": 5, "X": 10, "L": 50, "C": 100, "D": 500, "M": 1000}
-    # def romanToInt(self, s: str) -> int:
-    def romanToInt(self, s):
+    def romanToInt(self, s: str) -> int:
         res = 0
         last = 1000
         idx = 0
@@ -1074,8 +1066,7 @@ mysol.fourSum([1, 0, -1, 0, -2, 2], 0) # [[-2,-1,1,2],[-2,0,0,2],[-1,0,0,1]]
 
 ```python
 class Solution:
-    # def removeNthFromEnd(self, head: ListNode, n: int) -> ListNode:
-    def removeNthFromEnd(self, head, n):
+    def removeNthFromEnd(self, head: ListNode, n: int) -> ListNode:
         cur = head
         len_head = 1
         while cur.next is not None:
