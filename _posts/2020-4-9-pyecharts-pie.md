@@ -312,12 +312,13 @@ del df_lev2["lev2_ordered"]
 
 ```python
 # 颜色------------------------------------
-pal_5_purple = ['#80506E', '#A46E90','#DEACAB']
-pal_5_yellow = ['#E6A400', '#FFC229', '#FBE5B3']
-pal_5_green = ['#166138', '#219355', '#B9D998']
-pal_5_blue = ['#285171', '#5580A1', '#86A7C0']
-pal_5_red = ['#A9180F', '#DB5C5C', '#FD9B99']
-df_pal = pd.DataFrame({"red":pal_5_red, "yellow":pal_5_yellow, "green":pal_5_green, "blue":pal_5_blue, "purple":pal_5_purple})
+df_pal = pd.DataFrame({
+	"red":['#A9180F', '#DB5C5C', '#FD9B99'], 
+	"yellow":['#E6A400', '#FFC229', '#FBE5B3'], 
+	"green":['#166138', '#219355', '#B9D998'], 
+	"blue":['#285171', '#5580A1', '#86A7C0'], 
+	"purple":['#80506E', '#A46E90','#DEACAB']
+	})
 ```
 
 ![img](/assets/images/20200409pyechart_pie/output_26_1.png){:width='50%'}
