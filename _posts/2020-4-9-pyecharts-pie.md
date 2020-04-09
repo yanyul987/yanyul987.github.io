@@ -8,7 +8,7 @@ tags:
 layout: post
 excerpt_separator: <!--more-->
 ---
-<img src='./assets/images/20200409pyechart_pie/pie2_lev2_only.png', width=60%>
+<img src='/assets/images/20200409pyechart_pie/pie2_lev2_only.png', width='60%'>
 <!--more-->
 
 ## 数据读入及处理
@@ -320,7 +320,7 @@ pal_5_red = ['#A9180F', '#DB5C5C', '#FD9B99']
 df_pal = pd.DataFrame({"red":pal_5_red, "yellow":pal_5_yellow, "green":pal_5_green, "blue":pal_5_blue, "purple":pal_5_purple})
 ```
 
-<img src='./assets/images/20200409pyechart_pie/output_26_1.png', width=50%>
+<img src='/assets/images/20200409pyechart_pie/output_26_1.png', width='50%'>
 
 
 ```python
@@ -390,7 +390,7 @@ make_snapshot(snapshot, pie1.render(), "./WhatEverPath/pie1_lev1_only.png")
 # pie1.render('./WhatEverPath/pie1.html')
 ```
 
-<img src='./assets/images/20200409pyechart_pie/pie1_lev1_only.png', width=40%>
+<img src='/assets/images/20200409pyechart_pie/pie1_lev1_only.png', width='40%'>
 
 
 
@@ -435,7 +435,7 @@ make_snapshot(snapshot, pie2.render(), "./WhatEverPath/pie2_lev2_only.png")
 ```
 
 
-<img src='./assets/images/20200409pyechart_pie/pie2_lev2_only.png', width=60%>
+<img src='/assets/images/20200409pyechart_pie/pie2_lev2_only.png', width='60%'>
 
 
 
@@ -491,4 +491,4 @@ make_snapshot(snapshot, pie3.render(), "./WhatEverPath/pie3_full.png")
 
 
 
-<img src='./assets/images/20200409pyechart_pie/pie3_full.png', width=80%>
+<img src='/assets/images/20200409pyechart_pie/pie3_full.png', width='80%'>
