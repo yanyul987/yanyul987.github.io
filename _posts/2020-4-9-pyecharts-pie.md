@@ -300,8 +300,7 @@ df_lev2.head(10)
 ```python
 # 调整数据顺序
 data =  pd.merge(data, df_lev2[["lev2", "lev2_ordered"]], on="lev2").drop(columns="lev2").rename(columns={"lev2_ordered":"lev2"})
-# data = data.sort_values(by=["lev1", "lev2"])
-data = data.sort_values(by="lev2")
+data = data.sort_values(by=["lev2", "lev3"])
 
 df_lev2["lev2"] = [item.split("-")[-1] for item in df_lev2.lev2]
 del df_lev2["lev2_ordered"]
@@ -345,10 +344,6 @@ data.loc[data.lev3.isna(), "color"] = "#ffffff" # 第三层为空值的扇区上
 pyecharts全局参数：https://pyecharts.org/#/zh-cn/global_options  
 系列参数：https://pyecharts.org/#/zh-cn/series_options  
 饼图参数：https://pyecharts.org/#/zh-cn/basic_charts  
-rosetype: 是否展示成南丁格尔图，通过半径区分数据大小，有'radius'和'area'两种模式。  
->    radius：扇区圆心角展现数据的百分比，半径展现数据的大小  
-    area：所有扇区圆心角相同，仅通过半径展现数据大小  
-    None: 扇区圆心角不同，半径相同
 
 
 ```python
@@ -393,6 +388,55 @@ make_snapshot(snapshot, pie1.render(), "./WhatEverPath/pie1_lev1_only.png")
 
 ![img](/assets/images/20200409pyechart_pie/pie1_lev1_only.png){:width='40%'}
 
+
+rosetype: 是否展示成南丁格尔玫瑰图，通过半径区分数据大小，有'radius'和'area'两种模式。  
+>    None: 扇区圆心角不同，半径相同（普通扇形图）  
+    radius：扇区圆心角展现数据的百分比，半径展现数据的大小  
+    area：所有扇区圆心角相同，仅通过半径展现数据大小  
+
+
+```python
+pie1 = Pie(init_opts=opts.InitOpts(width='1050px', height='320px', bg_color='#ffffff')) 
+
+# 全局参数
+pie1.set_global_opts(# title_opts=opts.TitleOpts(title='玫瑰图示例'),
+                     legend_opts=opts.LegendOpts(is_show=False),
+                     toolbox_opts=opts.ToolboxOpts( ),
+                    )
+
+# 系列参数
+my_labelOpts = opts.LabelOpts(is_show=True, font_family="STZhongSong",rotate="auto", position="inside", color="#ffffff",font_size=19)
+my_itemOpts = opts.ItemStyleOpts( border_color="#ffffff" )
+
+# 设置颜色
+pie1.set_colors( df_lev1.color.tolist() )
+
+pie1.add("rosetype=None", [list(z) for z in zip(df_lev1.lev1, df_lev1.num)],
+        radius=["11%", "90%"], 
+        center=["16%", "50%"],
+        label_opts=my_labelOpts, itemstyle_opts=my_itemOpts
+        )
+
+pie1.add("rosetype=area", [list(z) for z in zip(df_lev1.lev1, df_lev1.num)],
+        radius=["11%", "90%"], 
+        center=["50%", "50%"],
+        rosetype="area",
+        label_opts=my_labelOpts, itemstyle_opts=my_itemOpts
+        )
+
+pie1.add("rosetype=radius", [list(z) for z in zip(df_lev1.lev1, df_lev1.num)],
+        radius=["11%", "90%"], 
+        center=["84%", "50%"],
+        rosetype="radius",
+        label_opts=my_labelOpts, itemstyle_opts=my_itemOpts
+        )
+
+make_snapshot(snapshot, pie1.render(), "./assets/images/20200409pyechart_pie/pie1_rosetype_compare.png")
+```
+
+
+从左到右依次是None, area, radius  
+![img](/assets/images/20200409pyechart_pie/pie1_rosetype_compare.png){:width="100%"}
 
 
 ```python
