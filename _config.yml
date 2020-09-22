@@ -6,7 +6,8 @@
 # Site
 title: Yanyu Long
 subtitle:
-description: School of Statistics and Mathematics, Central University of Finance and Economics
+  # description: School of Statistics and Mathematics, Central University of Finance and Economics
+description: Data Science Master's Student, Department of Statistics, University of Michigan, Ann Arbor
 author: Yanyu Long
 # Support language: de, en, fr-FR, id, ja, ko, pt-BR, pt, ru, zh-Hans, zh-hk, zh-tw
 language: zh-Hans
@@ -219,9 +220,9 @@ font:
 # Value is the target link (E.g. GitHub: https://github.com/iissnan)
 social:
   #LinkLabel: Link
-  GitHub: https://github.com/yanyul987
+  GitHub: https://github.com/longyyu
   #School: http://www.cufe.edu.cn/
-  Email: mailto:yanyu_long@qq.com
+  Email: mailto:longyyu@umich.edu
 
 
 # Social Links Icons
